@@ -6,9 +6,10 @@
    documentation notebook, then insert each PNG into the corresponding
    ```wolfram fence of the hand-curated markdown file. Idempotent. *)
 
-nbPath = "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/Package/DiracMatrix-Documentation.nb";
-mdPath = "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/Package/DiracMatrix-Documentation.md";
-imgDir = "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/Package/images";
+pkgDir = DirectoryName[DirectoryName[$InputFileName]];
+nbPath = FileNameJoin[{pkgDir, "DiracMatrix-Documentation.nb"}];
+mdPath = FileNameJoin[{pkgDir, "DiracMatrix-Documentation.md"}];
+imgDir = FileNameJoin[{pkgDir, "images"}];
 imgRel = "images";
 
 If[! DirectoryQ[imgDir], CreateDirectory[imgDir, CreateIntermediateDirectories -> True]];

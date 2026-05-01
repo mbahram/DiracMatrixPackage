@@ -1,5 +1,7 @@
 # DiracMatrix
 
+![DiracMatrix hero](assets/diracmatrix-hero-wolfram-warm-v2.png)
+
 A Wolfram Language paclet that **constructs** Dirac gamma matrices for an
 arbitrary real symmetric metric in any dimension. Given a metric `η`, it returns
 the literal `2^Floor[n/2] × 2^Floor[n/2]` matrices satisfying the Clifford
