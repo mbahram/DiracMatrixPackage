@@ -87,41 +87,61 @@ Selected usage messages:
 ?GammaMatrices
 ```
 
+> `GammaMatrices[n]` returns n Euclidean gamma matrices of dimension $2^{\lfloor n/2 \rfloor}$ in the Brauer-Weyl (Pauli-Kronecker) representation. `GammaMatrices[`$\eta$`]` returns gamma matrices satisfying the Clifford relation $\{\gamma^{\mu},\gamma^{\nu}\}=2\eta^{\mu \nu}\mathbb{I}$ for any real symmetric metric $\eta$. For a flat diagonal metric of signature $(p,q)$ the result is $i\,\Gamma^{\mu}$ for time-like indices and $\Gamma^{\mu}$ for space-like indices; for a general metric a vielbein decomposition is used.
+
 ```wolfram
 ?EuclideanGammaMatrices
 ```
+
+> `EuclideanGammaMatrices[n]` returns the n Euclidean gamma matrices in the Brauer-Weyl representation: $\Gamma^{2k-1}=\mathbb{I}^{\otimes(k-1)}\otimes \sigma_{1}\otimes \sigma_{3}^{\otimes(m-k)}$, $\Gamma^{2k}=\mathbb{I}^{\otimes(k-1)}\otimes \sigma_{2}\otimes \sigma_{3}^{\otimes(m-k)}$, and for odd n a final $\Gamma^{2m+1}=\sigma_{3}^{\otimes m}$.
 
 ```wolfram
 ?FlatMetric
 ```
 
+> `FlatMetric[p, q]` returns the diagonal flat metric `DiagonalMatrix[Join[ConstantArray[1, p], ConstantArray[-1, q]]]` of signature $(p,q)$.
+
 ```wolfram
 ?RandomCurvedMetric
 ```
+
+> `RandomCurvedMetric[p, q]` (or `RandomCurvedMetric[p, q, a, s]`) returns a random real symmetric non-diagonal metric of signature $(p,q)$ constructed as $Q^{T}\cdot \Lambda \cdot Q$ with $Q\in O(n)$ a random orthogonal matrix and $\Lambda$ a diagonal matrix whose first p eigenvalues are $s^{2}\,10^{r}$ and last q eigenvalues are $-s^{2}\,10^{r}$ for independent r drawn uniformly from $[-a, a]$. The default $a=2$ gives a condition number $\kappa \sim 10^{2a}$; $s=1$ sets the typical magnitude of the metric components.
 
 ```wolfram
 ?MetricVielbein
 ```
 
+> `MetricVielbein[`$\eta$`]` returns `{signature, vielbein}` for the real symmetric metric $\eta$, where `signature = DiagonalMatrix[Sign[eigenvalues]]` and the vielbein $e$ satisfies $e^{T}\cdot \text{signature}\cdot e=\eta$.
+
 ```wolfram
 ?ToDiracBasis
 ```
+
+> `ToDiracBasis[`$\gamma$`]` takes a list of gamma matrices in the Brauer-Weyl basis and returns them in the Dirac basis (where $\gamma^{0}$ is diagonal).
 
 ```wolfram
 ?ToWeylBasis
 ```
 
+> `ToWeylBasis[`$\gamma$`]` takes a list of gamma matrices in the Brauer-Weyl basis and returns them in the Weyl/chiral basis. For odd dimension there is no chiral decomposition; the Dirac basis is returned with a message.
+
 ```wolfram
 ?CliffordBasis
 ```
+
+> `CliffordBasis[`$\eta$`]` returns the canonical graded Clifford operator basis using the antisymmetrised recursion $\Gamma_{\mathcal{I}\cup \{\mu \}}=\Gamma_{\mathcal{I}}\cdot \Gamma_{\mu}-\sum_{j=1}^{|\mathcal{I}|}(-1)^{j-1}\eta_{\mu,i_{j}}\Gamma_{\mathcal{I}\setminus \{i_{j}\}}$. Much faster than `CliffordCanonicalBasis` and numerically stable; agrees with it on flat metrics at all grades.
 
 ```wolfram
 ?CliffordCanonicalBasis
 ```
 
+> `CliffordCanonicalBasis[`$\eta$`]` returns the canonical graded operator basis of the Clifford algebra $\mathrm{Cl}(\eta)$ as a list grouped by grade `{grade-0, grade-1, ..., grade-n}`. The grade-k element on indices $i_{1},\ldots,i_{k}$ is the explicitly antisymmetrised product $\frac{1}{k!}\sum_{\sigma \in S_{k}}\mathrm{sgn}(\sigma)\,\Gamma_{i_{\sigma(1)}}\cdots \Gamma_{i_{\sigma(k)}}$. Pedagogically transparent but combinatorially expensive; for non-flat metrics with widely scaled eigenvalues precision can degrade at high grades. Prefer `CliffordBasis` for production use.
+
 ```wolfram
 ?NumericZeroQ
 ```
+
+> `NumericZeroQ[a]` returns `True` if every entry of `a` (after `Chop` with tolerance $10^{-8}$) is zero. `NumericZeroQ[a, tol]` uses the supplied tolerance.
 
 ### Examples
 
@@ -132,6 +152,8 @@ In Euclidean space the metric is the identity and the gamma matrices coincide wi
 ```wolfram
 MatrixForm /@ GammaMatrices[4]
 ```
+
+![image](DiracMatrix-Documentation_files/image_001b.png)
 
 #### Minkowski space (1, 3)
 
