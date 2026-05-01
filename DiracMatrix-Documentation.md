@@ -67,7 +67,7 @@ where η is the signature matrix and Γ^a are the flat-space gamma matrices in t
 ### Loading the package
 
 ```wolfram
-PacletDirectoryLoad["/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/DiracMatrixPackage"];
+PacletDirectoryLoad["/path-to/DiracMatrixPackage"];
 Needs["DiracMatrix`"]
 ```
 
