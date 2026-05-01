@@ -45,11 +45,11 @@ $$
 For a flat metric $\eta_{\mu \nu}$ = diag(+1, ..., +1, -1, ..., -1) with p positive entries and q negative entries, the gamma matrices are:
 
 $$
-\gamma^{\mu}=\Gamma^{\mu}  \text{if}  \eta^{\mu \mu}=+1
+\gamma^{\mu}=\Gamma^{\mu} \quad \text{if} \quad \eta^{\mu \mu}=+1
 $$
 
 $$
-\gamma^{\mu}=i \,\Gamma^{\mu}  \text{if}  \eta^{\mu \mu}=-1
+\gamma^{\mu}=i\,\Gamma^{\mu} \quad \text{if} \quad \eta^{\mu \mu}=-1
 $$
 
 The resulting algebra is Cl(p, q).
@@ -241,8 +241,6 @@ For odd dimension there is no Weyl/chiral decomposition; the function emits a me
 
 ```wolfram
 MatrixForm/@ToWeylBasis[GammaMatrices[FlatMetric[2, 3]]]
-(* Output *)
-ToWeylBasis
 ```
 
 ![image](DiracMatrix-Documentation_files/image_013.png)
@@ -272,7 +270,7 @@ Table[Dimensions @ GammaMatrices[FlatMetric[p, n - p]] ==
 #### Tracelessness
 
 $$
-\operatorname{Tr}(\gamma^{\mu})=0
+\mathrm{Tr}(\gamma^{\mu})=0
 $$
 
 ```wolfram
@@ -317,7 +315,7 @@ Table[
 #### Trace of two gammas
 
 $$
-\operatorname{Tr}(\gamma^{\mu}\gamma^{\nu})=2^{\lfloor n/2 \rfloor}\eta^{\mu \nu}
+\mathrm{Tr}(\gamma^{\mu}\gamma^{\nu})=2^{\lfloor n/2 \rfloor}\eta^{\mu \nu}
 $$
 
 ```wolfram
@@ -333,7 +331,7 @@ Table[
 #### Trace of four gammas
 
 $$
-\operatorname{Tr}(\gamma^{\mu}\gamma^{\nu}\gamma^{\alpha}\gamma^{\beta})=2^{\lfloor n/2 \rfloor}(\eta^{\mu \nu}\eta^{\alpha \beta}-\eta^{\mu \alpha}\eta^{\nu \beta}+\eta^{\mu \beta}\eta^{\nu \alpha})
+\mathrm{Tr}(\gamma^{\mu}\gamma^{\nu}\gamma^{\alpha}\gamma^{\beta})=2^{\lfloor n/2 \rfloor}(\eta^{\mu \nu}\eta^{\alpha \beta}-\eta^{\mu \alpha}\eta^{\nu \beta}+\eta^{\mu \beta}\eta^{\nu \alpha})
 $$
 
 ```wolfram
@@ -450,7 +448,7 @@ Table[
 The grade-k element of the canonical Clifford operator basis is the antisymmetrised product
 
 $$
-\Gamma_{[i_{1},\ldots,i_{k}]}=\frac{1}{k!}\sum_{\sigma \in \mathcal{S}_{k}}\operatorname{sgn}(\sigma)\Gamma_{i_{\sigma_{1}}}\cdots \Gamma_{i_{\sigma_{k}}}
+\Gamma_{[i_{1},\ldots,i_{k}]}=\frac{1}{k!}\sum_{\sigma \in \mathcal{S}_{k}}\mathrm{sgn}(\sigma)\,\Gamma_{i_{\sigma_{1}}}\cdots \Gamma_{i_{\sigma_{k}}}
 $$
 
 where $\mathcal{S}_{k}$ is the symmetric group on k indices.
