@@ -107,3 +107,89 @@ Full mathematical background, examples across signatures and dimensions, and
 verification of standard γ-matrix identities live in
 [`DiracMatrix-Documentation.md`](DiracMatrix-Documentation.md) (rendered from
 [`DiracMatrix-Documentation.nb`](DiracMatrix-Documentation.nb)).
+
+## Related work
+
+The Clifford / γ-matrix software landscape is well-developed. Existing packages
+broadly fall into three design points, and `DiracMatrix` sits in the
+least-populated of the three. Each tool below is excellent for its intended
+use; the goal of this section is to help you pick the right one.
+
+### Symbolic abstract-index engines (Mathematica)
+
+These manipulate `γ^μ` as a formal object with Lorentz indices, applying
+anticommutation, Fierz, and trace identities. They do not return matrix
+entries; the user supplies an explicit representation only when needed.
+
+- **[GammaMaP](https://github.com/PyryKuusela/GammaMaP)** ([Kuusela 2019, arXiv:1905.00429](https://arxiv.org/abs/1905.00429)) — the most modern
+  and feature-rich. Spinor bilinears, intertwiners A/B/C, charge conjugation,
+  Majorana/Weyl projections, Fierz, decomposition under SO(d₁)×…×SO(dₘ)
+  subalgebras. Designed for SUGRA and string-theory book-keeping.
+- **[GAMMA](https://arxiv.org/abs/hep-th/0105086)** (Gran 2001) — gamma-matrix
+  algebra and Fierz transformations in arbitrary integer dimension.
+- **[Tracer](https://library.wolfram.com/infocenter/ID/2987/)** (Jamin & Lautenbacher 1991) —
+  γ-traces in arbitrary `D` (’t Hooft–Veltman scheme), aimed at QFT loop
+  integrals.
+- **[FeynCalc](https://feyncalc.github.io/)**'s `DiracMatrix` / `GA` — abstract
+  Dirac objects for Feynman-diagram automation; flat Minkowski + dimensional
+  regularisation only.
+- **[Clifford Algebra with Mathematica](https://arxiv.org/abs/0810.2412)**
+  (Aragón et al. 2008) — general-purpose Clifford manipulation in 3D and
+  pedagogy.
+
+### Multivector-based geometric algebra (Python, Julia)
+
+These represent elements of `Cl(p,q)` or `Cl(p,q,r)` directly as multivectors
+in a basis of grades, rather than as matrices. The Dirac γ's are the grade-1
+basis vectors of the algebra; products and traces are computed in that
+representation.
+
+- **[`clifford`](https://github.com/pygae/clifford)** (pygae, Python) —
+  numerical GA over arbitrary `Cl(p,q,r)` signatures. Multivectors as NumPy
+  arrays. Strong tooling, used in computer-graphics, robotics, conformal GA.
+- **[`galgebra`](https://github.com/pygae/galgebra)** (pygae, Python on SymPy) —
+  *symbolic* GA with an **arbitrary symbolic metric tensor**, including
+  position-dependent metrics for curved manifolds. The closest competitor in
+  scope to `DiracMatrix` for the curved-metric use case, but works in
+  multivector form, not matrix form.
+- **[Grassmann.jl](https://github.com/chakravala/Grassmann.jl)** (Julia) —
+  Grassmann–Clifford–Hodge algebra with `DiagonalForm` and `MetricTensor`
+  (non-diagonal). High-dimensional, sparse-tensor backend.
+- **[`sympy.physics.matrices.mgamma`](https://docs.sympy.org/latest/modules/physics/matrices.html)** —
+  the standard 4×4 Dirac γ matrices in SymPy. Fixed dimension and basis;
+  included for completeness.
+
+### Explicit matrix realisations (where this package sits)
+
+Given a metric, return the actual `2^⌊n/2⌋ × 2^⌊n/2⌋` matrices. This is the
+representation you want when you need to plug `γ^μ` into a concrete
+Hamiltonian, simulate a Dirac equation numerically, build a discrete
+Bogoliubov–de Gennes operator, or check identities by direct computation.
+
+To my knowledge, no other package combines, in this style:
+
+1. arbitrary **real symmetric** metric (not just signed-diagonal `(p, q)`) via
+   automatic vielbein decomposition,
+2. the explicit Brauer–Weyl Pauli–Kronecker construction in any dimension,
+3. similarity transforms into the Dirac and Weyl/chiral bases, and
+4. the canonical graded antisymmetrised Clifford operator basis with both a
+   pedagogical implementation and a numerically stable recursive one.
+
+`galgebra` is the closest in scope but lives in the symbolic-multivector world;
+`clifford` and `Grassmann.jl` are numerical but multivector-based and signature-
+restricted (no automatic vielbein for an arbitrary curved metric).
+
+### Which to pick
+
+| Your goal                                                                | Use                       |
+|--------------------------------------------------------------------------|---------------------------|
+| Algebraic identities, Fierz, traces, SUGRA/string book-keeping in WL     | GammaMaP, FeynCalc        |
+| QFT loop traces with dimensional regularisation                          | Tracer, FeynCalc          |
+| GA in graphics / robotics / conformal models, Python                     | `clifford` (pygae)        |
+| Symbolic GA with a position-dependent metric, Python                     | `galgebra`                |
+| Multivector GA in Julia, high-dimensional                                | Grassmann.jl              |
+| **Explicit γ matrices for a given (possibly curved, non-diagonal) metric** | **`DiracMatrix` (this package)** |
+| Dirac/Weyl basis transforms or graded operator basis as concrete matrices | **`DiracMatrix`**         |
+
+Corrections and additions are welcome — open an issue if a package belongs in
+this list.
