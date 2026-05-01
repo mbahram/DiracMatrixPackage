@@ -6,7 +6,7 @@ the literal `2^Floor[n/2] × 2^Floor[n/2]` matrices satisfying the Clifford
 relation
 
 $$
-\{\gamma^{\mu},\gamma^{\nu}\} \;=\; 2\,\eta^{\mu\nu}\,\mathbb{I}.
+\lbrace \gamma^{\mu}, \gamma^{\nu} \rbrace = 2 \eta^{\mu\nu} \mathbf{I}.
 $$
 
 — **Author:** Mads Bahrami · **License:** MIT · **Version:** 1.0.0
