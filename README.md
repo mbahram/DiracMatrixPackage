@@ -101,6 +101,49 @@ in [`DiracMatrix-Documentation.md`](DiracMatrix-Documentation.md).
 | `CliffordBasis`           | Graded operator basis via stable antisymmetric recursion (production)    |
 | `NumericZeroQ`            | Tolerance-based zero test for numerical identity verification            |
 
+## Calling from other languages
+
+The package runs on a Wolfram kernel; the free
+[**Wolfram Engine**](https://www.wolfram.com/engine/) is enough for development
+and research use. Three practical bridges:
+
+**Python — persistent session via [`wolframclient`](https://reference.wolfram.com/language/WolframClientForPython/):**
+
+```python
+from wolframclient.evaluation import WolframLanguageSession
+from wolframclient.language import wl, wlexpr
+import numpy as np
+
+session = WolframLanguageSession()
+session.evaluate(wlexpr('PacletDirectoryLoad["/path/to/DiracMatrixPackage"]'))
+session.evaluate(wlexpr('Needs["DiracMatrix`"]'))
+
+gammas = session.evaluate(
+    wl.DiracMatrix.GammaMatrices(np.diag([-1.0, 1.0, 1.0, 1.0]))
+)
+# gammas: tuple of 4×4 NumPy arrays
+session.terminate()
+```
+
+NumPy ↔ Wolfram packed arrays auto-convert in both directions.
+
+**Julia** — [`MathLink.jl`](https://github.com/JuliaInterop/MathLink.jl) offers
+the same persistent-kernel pattern over WSTP.
+
+**One-shots from anywhere** — `wolframscript` (ships with Wolfram Engine):
+
+```bash
+wolframscript -code 'Needs["DiracMatrix`"]; \
+  ExportString[GammaMatrices[FlatMetric[1, 3]], "JSON"]'
+```
+
+**HTTP from any language** — wrap in an `APIFunction` and `CloudDeploy` for a
+language-agnostic endpoint.
+
+Notes: the Wolfram Engine licence is free for development, not for commercial
+production; kernel startup is the dominant cost, so keep one session alive
+across calls.
+
 ## Documentation
 
 Full mathematical background, examples across signatures and dimensions, and
