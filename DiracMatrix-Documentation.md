@@ -42,7 +42,7 @@ $$
 
 #### Signed-diagonal metric
 
-For a flat metric η_(μν) = diag(+1, ..., +1, -1, ..., -1) with p positive entries and q negative entries, the gamma matrices are:
+For a flat metric $\eta_{\mu \nu}$ = diag(+1, ..., +1, -1, ..., -1) with p positive entries and q negative entries, the gamma matrices are:
 
 $$
 \gamma^{\mu}=\Gamma^{\mu}  \text{if}  \eta^{\mu \mu}=+1
@@ -56,7 +56,7 @@ The resulting algebra is Cl(p, q).
 
 #### Vielbein construction for general metrics
 
-For a general real symmetric metric g, a vielbein e^a_μ(x) is computed such that g_(μν) = e^a_μ e^b_ν η_(ab) (equivalently g = e^T · η · e), and:
+For a general real symmetric metric g, a vielbein $e_{\mu}^{a}$(x) is computed such that $g_{\mu \nu}$ = $e_{\mu}^{a}$ $e_{\nu}^{b}$ $\eta_{ab}$ (equivalently g = $e^{T}$ · η · e), and:
 
 $$
 \gamma^{\mu}(x)=e_{a}^{\mu}\Gamma^{a}
@@ -67,7 +67,7 @@ where η is the signature matrix and Γ^a are the flat-space gamma matrices in t
 ### Loading the package
 
 ```wolfram
-PacletDirectoryLoad["/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/Package"];
+PacletDirectoryLoad["/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/DiracMatrixPackage"];
 Needs["DiracMatrix`"]
 ```
 
