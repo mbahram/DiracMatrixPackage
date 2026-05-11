@@ -1,0 +1,273 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+(* Wolfram Notebook File *)
+(* http://www.wolfram.com/nb *)
+(* CreatedBy='build_ref_pages.py' *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["CliffordBasis", "ObjectName",
+ CellID->1984350833, ExpressionUUID->"d1bf4bee-3b31-4c9b-a126-b9776da3fe78"],
+Cell[TextData[{
+Cell[BoxData[RowBox[{"CliffordBasis", "[", "\[Eta]", "]"}]], "InlineFormula",
+ ExpressionUUID->"2d583421-b198-444f-a819-001f733fc38b"], "\[LineSeparator]returns the canonical graded Clifford operator basis computed via an antisymmetrised recursion; same shape as CliffordCanonicalBasis but much faster and numerically stable."
+}], "Usage",
+ CellID->1439590348, ExpressionUUID->"c214dbba-64c9-42e5-b96a-985aff465a35"],
+Cell[TextData[{"The recursion is ", Cell[BoxData[FormBox[
+  RowBox[{SubscriptBox["\[CapitalGamma]", RowBox[{StyleBox["I", FontFamily->"Script"], " ", "\[Union]", " ", "{", " ", "\[Mu]", " ", "}"}]], "=", SubscriptBox["\[CapitalGamma]", StyleBox["I", FontFamily->"Script"]], "\[CenterDot]", SubscriptBox["\[CapitalGamma]", "\[Mu]"], "-", UnderoverscriptBox["\[Sum]", RowBox[{"j", "=", "1"}], RowBox[{"\[VerticalSeparator]", " ", StyleBox["I", FontFamily->"Script"], " ", "\[VerticalSeparator]"}]], "(", "-", "1", " ", SuperscriptBox[")", RowBox[{"j", "-", "1"}]], " ", SubscriptBox["\[Eta]", RowBox[{"\[Mu]", ",", SubscriptBox["i", "j"]}]], " ", "\[ThinSpace]", " ", SubscriptBox["\[CapitalGamma]", RowBox[{StyleBox["I", FontFamily->"Script"], " ", "setminus", " ", "{", " ", SubscriptBox["i", "j"], " ", "}"}]]}],
+  TraditionalForm
+]], "InlineFormula"], ", building each grade from the previous one without recomputing permutation sums."}], "Notes",
+ CellID->1604166617, ExpressionUUID->"e20d93fa-cca4-496e-8c51-a57476489a77"],
+Cell[TextData[{"CliffordBasis is the production-ready implementation: O(", Cell[BoxData[FormBox[
+  SuperscriptBox["2", "n"],
+  TraditionalForm
+]], "InlineFormula"], " n²) operations versus O(", Cell[BoxData[FormBox[
+  SuperscriptBox["2", "n"],
+  TraditionalForm
+]], "InlineFormula"], " n!) for CliffordCanonicalBasis, and numerically stable for curved metrics with widely scaled eigenvalues."}], "Notes",
+ CellID->717894389, ExpressionUUID->"6c50023d-9737-44c4-840a-b04f0220e1d0"],
+Cell["On flat metrics it agrees with CliffordCanonicalBasis at every grade.", "Notes",
+ CellID->1939221786, ExpressionUUID->"78f1fd19-f82c-4a42-885a-c4d4a4c46f69"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["See Also", "SeeAlsoSection",
+ CellID->1793717650, ExpressionUUID->"bab8cc27-2859-4658-abc1-3b6348fdb387"],
+Cell[TextData[{
+Cell[BoxData[ButtonBox["CliffordCanonicalBasis",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/CliffordCanonicalBasis"]],
+ "InlineFormula", ExpressionUUID->"b9658076-0db4-4880-8bd3-a4c00acb5590"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["GammaMatrices",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/GammaMatrices"]],
+ "InlineFormula", ExpressionUUID->"656107c7-c8e5-463b-ac18-d504f85459f0"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["FlatMetric",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/FlatMetric"]],
+ "InlineFormula", ExpressionUUID->"4efcd193-d62a-4fd1-bf3b-009f80da7bdb"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["RandomCurvedMetric",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/RandomCurvedMetric"]],
+ "InlineFormula", ExpressionUUID->"55d8cc4d-3ca6-4542-a82a-36d9e9b0d330"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["NumericZeroQ",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/NumericZeroQ"]],
+ "InlineFormula", ExpressionUUID->"c67f22e2-0fc1-468d-9575-f0e360929097"]
+}], "SeeAlso",
+ CellID->1128480839, ExpressionUUID->"41998b2d-d2c7-4f29-b056-5bed823ef7d1"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Tech Notes", "TechNotesSection",
+ CellID->1746828385, ExpressionUUID->"5009154a-9645-4923-82ae-12a689644946"],
+Cell[" ", "Tutorials",
+ CellID->2025142322, ExpressionUUID->"a081e2bc-06e8-418e-8589-7718c4cc7d04"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["More About", "MoreAboutSection",
+ CellID->1958905677, ExpressionUUID->"ffd7d516-e3e4-42c3-85e4-5db672aa3e05"],
+Cell[TextData[{
+Cell[BoxData[ButtonBox["DiracMatrix",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/guide/DiracMatrix"]],
+ "InlineFormula", ExpressionUUID->"45b59caa-2623-4a26-8532-5226095a251b"]
+}], "MoreAbout",
+ CellID->1490884953, ExpressionUUID->"bf04d425-7491-4b72-935c-7b5f30b670c0"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Related Links", "RelatedLinksSection",
+ CellID->644421892, ExpressionUUID->"771e9d84-7209-4c8e-9fa9-5aaeccdff0b7"],
+Cell[" ", "RelatedLinks",
+ CellID->1650296507, ExpressionUUID->"70d57fb9-dc82-4a1e-9056-b31ab18670ed"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Examples Initialization", "ExamplesInitializationSection",
+ CellID->1089633471, ExpressionUUID->"000eff9c-a13f-4abe-ac81-f5d1d5a81ec7"],
+Cell[BoxData[RowBox[{"Needs", "[", "\"DiracMatrix`\"", "]"}]], "ExampleInitialization",
+ CellID->507094911, ExpressionUUID->"a210d039-978d-4a64-80ac-94a6fa84fdb7"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Basic Examples", "PrimaryExamplesSection",
+ CellID->1864154079, ExpressionUUID->"17562a4c-536b-4dae-8a7f-05ca1e228d86"],
+Cell["The four-dimensional Minkowski basis has 1 + 4 + 6 + 4 + 1 = 16 elements grouped by grade:", "ExampleText",
+ CellID->1382631908, ExpressionUUID->"ceb813e0-fb57-4c0a-a0ae-349631282ec1"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"Length", " ", "/@", " ", RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]], "Input",
+ CellID->263144154, ExpressionUUID->"9777b6c8-f635-480d-93aa-656fe2b72d4a"],
+Cell[BoxData[RowBox[{"{", RowBox[{"1", ",", "4", ",", "6", ",", "4", ",", "1"}], "}"}]], "Output",
+ CellID->2118288361, ExpressionUUID->"aa35b3e0-aeab-458c-b3e3-43eedfdc9549"]
+}, Open]],
+Cell["The grade-1 elements are the gamma matrices:", "ExampleText",
+ CellID->996142012, ExpressionUUID->"1aa40f33-0ad5-4d0a-94f0-18c3befe0a52"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{RowBox[{RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}], "[", RowBox[{"[", "2", "]"}], "]"}], " ", "===", " ", RowBox[{"GammaMatrices", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]], "Input",
+ CellID->1538855925, ExpressionUUID->"b57096ea-7e7a-4635-bf3f-03c6440b93b7"],
+Cell[BoxData["True"], "Output",
+ CellID->231606174, ExpressionUUID->"ac3af3fc-a2ea-495e-abc6-f620766bf67f"]
+}, Open]]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["ExamplesSection", "ExtendedExamplesSection",
+ CellID->1762297514, ExpressionUUID->"1bfc8da4-b14f-45cb-9b01-3ae1b9ed3aa5"],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->"5e37ae82-4bff-4a59-b2a3-c87f90bd105d"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1839571437, ExpressionUUID->"77ac135e-86ae-438d-a244-ab2efe85ae2f"],
+Cell["Agreement with CliffordCanonicalBasis on flat metrics", "ExampleSubsection",
+ CellID->1517739832, ExpressionUUID->"f1a1d6f4-9854-440a-bbdd-3423a48dbed2"],
+Cell["The two implementations produce the same basis at every grade on flat metrics:", "ExampleText",
+ CellID->439734258, ExpressionUUID->"aa86292c-d4af-4450-9b17-287eb1e77f70"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{RowBox[{RowBox[{"Table", "[", "\n", "  ", RowBox[{RowBox[{RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"p", ",", " ", RowBox[{"n", " ", "-", " ", "p"}]}], "]"}], "]"}], " ", "===", " ", "\n", "    ", RowBox[{"CliffordCanonicalBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"p", ",", " ", RowBox[{"n", " ", "-", " ", "p"}]}], "]"}], "]"}]}], ",", "\n", "  ", RowBox[{"{", RowBox[{"n", ",", " ", "2", ",", " ", "5"}], "}"}], ",", " ", RowBox[{"{", RowBox[{"p", ",", " ", "0", ",", " ", "n"}], "}"}]}], "]"}], " ", "//", " ", "Flatten"}], " ", "//", " ", RowBox[{"Apply", "[", "And", "]"}]}]], "Input",
+ CellID->1966108165, ExpressionUUID->"259a59c3-116d-4a35-88fc-f16cafde4461"],
+Cell[BoxData["True"], "Output",
+ CellID->218645348, ExpressionUUID->"1394ee8d-70f0-4ddb-8a50-c0ce434dd650"]
+}, Open]],
+Cell["Numerical stability for curved metrics", "ExampleSubsection",
+ CellID->1001025705, ExpressionUUID->"4dc6b07c-0bc4-40c3-9a87-a6cb391c23ce"],
+Cell["At low grade, CliffordBasis and CliffordCanonicalBasis agree on a random curved metric:", "ExampleText",
+ CellID->463889840, ExpressionUUID->"5c754bb7-be74-4d50-8f87-d9e4be43bd7f"],
+Cell[CellGroupData[{
+Cell[BoxData[{RowBox[{RowBox[{"SeedRandom", "[", "12345", "]"}], ";"}], "\n", RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{"\[Eta]", " ", "=", " ", RowBox[{"RandomCurvedMetric", "[", RowBox[{"3", ",", " ", "3"}], "]"}]}], "}"}], ",", "\n", "  ", RowBox[{"NumericZeroQ", "[", "\n", "    ", RowBox[{RowBox[{RowBox[{"CliffordCanonicalBasis", "[", "\[Eta]", "]"}], "[", RowBox[{"[", RowBox[{";;", " ", "3"}], "]"}], "]"}], " ", "-", " ", "\n", "    ", RowBox[{RowBox[{"CliffordBasis", "[", "\[Eta]", "]"}], "[", RowBox[{"[", RowBox[{";;", " ", "3"}], "]"}], "]"}]}], "]"}]}], "]"}]}], "Input",
+ CellID->2134448630, ExpressionUUID->"c1ceae88-4b81-42f9-801a-a1e6ca69ecd4"],
+Cell[BoxData["True"], "Output",
+ CellID->1371694318, ExpressionUUID->"abe3a50e-3a00-446a-8152-338183d91396"]
+}, Open]],
+Cell["Higher dimensions", "ExampleSubsection",
+ CellID->367730196, ExpressionUUID->"e1341c4d-2a3a-4f3c-8faf-0ecd8a0c9392"],
+Cell[TextData[{"A six-dimensional flat signature: ", Cell[BoxData[FormBox[
+  RowBox[{"1", "+", "6", "+", "15", "+", "20", "+", "15", "+", "6", "+", "1", "=", "64", "=", SuperscriptBox["2", "6"]}],
+  TraditionalForm
+]], "InlineFormula"], ":"}], "ExampleText",
+ CellID->1299796023, ExpressionUUID->"f570cbd0-aa09-4a94-bbb5-374f8a89afab"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"Length", " ", "/@", " ", RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"3", ",", " ", "3"}], "]"}], "]"}]}]], "Input",
+ CellID->2090941638, ExpressionUUID->"8049897a-4f63-4e68-8e04-a561cf984236"],
+Cell[BoxData[RowBox[{"{", RowBox[{"1", ",", "6", ",", "15", ",", "20", ",", "15", ",", "6", ",", "1"}], "}"}]], "Output",
+ CellID->988250972, ExpressionUUID->"9e345ec6-97de-4dc3-bbff-b45d06378c61"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->"162f32ac-ee09-4e7a-8df7-8e6b01d35a99"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1260582624, ExpressionUUID->"ac88a51a-e78b-4fb3-88eb-cf69b8aaeae3"],
+Cell["Grade-2 elements are antisymmetric products", "ExampleSubsection",
+ CellID->1986488575, ExpressionUUID->"0196d8a0-d151-4597-9ed1-96a56bf63a20"],
+Cell[TextData[{"The grade-2 elements satisfy ", Cell[BoxData[FormBox[
+  RowBox[{SubscriptBox["\[CapitalGamma]", RowBox[{"\[Mu]", " ", "\[Nu]"}]], "=", FractionBox["1", "2"], "[", SuperscriptBox["\[Gamma]", "\[Mu]"], ",", SuperscriptBox["\[Gamma]", "\[Nu]"], "]"}],
+  TraditionalForm
+]], "InlineFormula"], ":"}], "ExampleText",
+ CellID->791923102, ExpressionUUID->"c9f24a2c-28f4-4b1a-8b1c-351e98a3a370"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{RowBox[{"\[Gamma]", " ", "=", " ", RowBox[{"GammaMatrices", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}], ",", " ", "\[CapitalGamma]2"}], "}"}], ",", "\n", "  ", RowBox[{RowBox[{"\[CapitalGamma]2", " ", "=", " ", RowBox[{RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}], "[", RowBox[{"[", "3", "]"}], "]"}]}], ";", "\n", "  ", RowBox[{"\[CapitalGamma]2", " ", "===", " ", RowBox[{"Table", "[", "\n", "    ", RowBox[{RowBox[{RowBox[{"(", RowBox[{RowBox[{RowBox[{"\[Gamma]", "[", RowBox[{"[", RowBox[{RowBox[{"Subsets", "[", RowBox[{RowBox[{"Range", "[", "4", "]"}], ",", " ", RowBox[{"{", "2", "}"}]}], "]"}], "[", RowBox[{"[", RowBox[{"i", ",", " ", "1"}], "]"}], "]"}], "]"}], "]"}], " ", ".", " ", RowBox[{"\[Gamma]", "[", RowBox[{"[", RowBox[{RowBox[{"Subsets", "[", RowBox[{RowBox[{"Range", "[", "4", "]"}], ",", " ", RowBox[{"{", "2", "}"}]}], "]"}], "[", RowBox[{"[", RowBox[{"i", ",", " ", "2"}], "]"}], "]"}], "]"}], "]"}]}], " ", "-", " ", "\n", "     ", RowBox[{RowBox[{"\[Gamma]", "[", RowBox[{"[", RowBox[{RowBox[{"Subsets", "[", RowBox[{RowBox[{"Range", "[", "4", "]"}], ",", " ", RowBox[{"{", "2", "}"}]}], "]"}], "[", RowBox[{"[", RowBox[{"i", ",", " ", "2"}], "]"}], "]"}], "]"}], "]"}], " ", ".", " ", RowBox[{"\[Gamma]", "[", RowBox[{"[", RowBox[{RowBox[{"Subsets", "[", RowBox[{RowBox[{"Range", "[", "4", "]"}], ",", " ", RowBox[{"{", "2", "}"}]}], "]"}], "[", RowBox[{"[", RowBox[{"i", ",", " ", "1"}], "]"}], "]"}], "]"}], "]"}]}]}], ")"}], "/", "2"}], ",", "\n", "    ", RowBox[{"{", RowBox[{"i", ",", " ", RowBox[{"Length", " ", "@", " ", RowBox[{"Subsets", "[", RowBox[{RowBox[{"Range", "[", "4", "]"}], ",", " ", RowBox[{"{", "2", "}"}]}], "]"}]}]}], "}"}]}], "]"}]}]}]}], "]"}]], "Input",
+ CellID->749916917, ExpressionUUID->"dae4a9f6-a52e-4aaa-a4b6-a7d1f3f8fb00"],
+Cell[BoxData["True"], "Output",
+ CellID->1731475739, ExpressionUUID->"498496f8-7199-476f-a4a8-50921f17341b"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->"891b3c0f-2e92-45b6-90f5-f3c98308e30f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1414505620, ExpressionUUID->"b673b900-90dc-4cff-975f-b834c8713796"],
+Cell["Non-symmetric input does not match the guard pattern; the call remains unevaluated:", "ExampleText",
+ CellID->106393983, ExpressionUUID->"6a8862ca-4ded-4ed6-b1b9-431b55024545"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"CliffordBasis", "[", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"1", ",", " ", "2"}], "}"}], ",", " ", RowBox[{"{", RowBox[{"3", ",", " ", "4"}], "}"}]}], "}"}], "]"}]], "Input",
+ CellID->367234551, ExpressionUUID->"66066168-f3dd-4569-ac2c-a09915eb797d"],
+Cell[BoxData[RowBox[{"CliffordBasis", "[", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"1", ",", "2"}], "}"}], ",", RowBox[{"{", RowBox[{"3", ",", "4"}], "}"}]}], "}"}], "]"}]], "Output",
+ CellID->1925502930, ExpressionUUID->"db9a6bfa-b400-4e4b-9991-1a302f3eb384"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->"b6679f31-7de2-47bf-9762-6077d4674ea4"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1373574653, ExpressionUUID->"d88949bb-a0af-48c2-8709-39c763a87720"],
+Cell[TextData[{"The grade-n element is the chirality (volume) operator; on Minkowski (1, 3) it is ", Cell[BoxData[FormBox[
+  RowBox[{SuperscriptBox["\[Gamma]", "0"], " ", SuperscriptBox["\[Gamma]", "1"], " ", SuperscriptBox["\[Gamma]", "2"], " ", SuperscriptBox["\[Gamma]", "3"]}],
+  TraditionalForm
+]], "InlineFormula"], ":"}], "ExampleText",
+ CellID->2112468364, ExpressionUUID->"6984bd7c-faed-4c34-b058-067fd97bf038"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{RowBox[{"Last", " ", "@", " ", RowBox[{"Last", " ", "@", " ", RowBox[{"CliffordBasis", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]}], " ", "===", " ", "\n", "  ", RowBox[{"Dot", " ", "@@", " ", RowBox[{"GammaMatrices", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]}]], "Input",
+ CellID->443931556, ExpressionUUID->"c7f30841-4d82-49b5-ac56-d52c0221878e"],
+Cell[BoxData["True"], "Output",
+ CellID->482976001, ExpressionUUID->"4682d6cb-79e8-402a-acec-57ec4a0be92b"]
+}, Open]]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Metadata", "MetadataSection",
+ CellID->1042744208, ExpressionUUID->"78b4cb94-298d-4fc2-b446-f0d3a992c51e"],
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0.0", "HistoryData",
+  CellTags->"New", ExpressionUUID->"5e46fc38-1148-4a28-a1fa-f82c432cd484"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified", ExpressionUUID->"3bba35a8-7ae0-4443-ad19-75a2cee5e2ba"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete", ExpressionUUID->"cab8a961-b639-46e4-bd55-b445a5d0b83c"]
+}], "History",
+ CellID->985505137, ExpressionUUID->"a67c3c95-3e7f-4763-8d90-35859cad8a54"],
+Cell[CellGroupData[{
+Cell["Categorization", "CategorizationSection",
+ CellID->838666945, ExpressionUUID->"a12bda80-2e05-41e4-968e-2c6ba24df404"],
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->57234329, ExpressionUUID->"e5e031a1-8be0-4106-8c78-810aac547d28"],
+Cell["DiracMatrix", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->1732176903, ExpressionUUID->"69761423-26e5-4818-91ac-d0b55a6f2cba"],
+Cell["DiracMatrix`", "Categorization",
+ CellLabel->"Context",
+ CellID->1982262764, ExpressionUUID->"5f8b369b-eeee-48df-b865-6ef28c73df9f"],
+Cell["DiracMatrix/ref/CliffordBasis", "Categorization",
+ CellLabel->"URI",
+ CellID->1851711920, ExpressionUUID->"9d994b5c-64a3-4e35-94b0-6088e7326f62"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell["Keywords", "KeywordsSection",
+ CellID->1023091228, ExpressionUUID->"79f648b9-3710-4d96-a81d-025ff4c93e8d"],
+Cell["Clifford algebra", "Keywords",
+ CellID->926191915, ExpressionUUID->"ce160b83-079c-4ec2-81ed-d4a05697d7be"],
+Cell["graded basis", "Keywords",
+ CellID->1417181565, ExpressionUUID->"c4350a08-3d04-4f57-a6f0-2881d5c199fb"],
+Cell["antisymmetric recursion", "Keywords",
+ CellID->686415175, ExpressionUUID->"3a0275f6-237b-432e-8e2d-3f1bf4ac3854"],
+Cell["exterior algebra", "Keywords",
+ CellID->107597864, ExpressionUUID->"bb1906a6-1a36-4c47-bb8d-e493e028a138"],
+Cell["spinor", "Keywords",
+ CellID->1752813803, ExpressionUUID->"7021a2b6-bda4-485d-9d34-de69455dc938"],
+Cell["chirality operator", "Keywords",
+ CellID->116867627, ExpressionUUID->"0266c266-b25b-47f0-8be5-d8907590239e"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->2129047282, ExpressionUUID->"f76b0dd1-4c93-4771-82f2-729f0d9e78c6"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1300983246, ExpressionUUID->"f722eb63-2d40-4123-b17a-526fecf9b3ad"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->1606211951, ExpressionUUID->"afd72853-5ca2-42dc-a9bb-e6b30f05d6f9"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1263129166, ExpressionUUID->"2fcee5f2-419d-483e-94da-9a017054eb9e"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->1623511363, ExpressionUUID->"db1b0c88-313c-42ae-ae7e-543c6d19f6df"]
+}, Closed]]
+}, Open]]
+
+},
+WindowSize->{1107, 652},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "DiracMatrix"|>,
+CellContext->"Global`",
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (February 17, 2026)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"28d0f179-1b22-4648-a4f4-0914d633caa1"
+]

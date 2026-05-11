@@ -1,0 +1,305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+(* Wolfram Notebook File *)
+(* http://www.wolfram.com/nb *)
+(* CreatedBy='build_ref_pages.py' *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MetricVielbein", "ObjectName",
+ CellID->1392669626, ExpressionUUID->"05f40d89-e6fb-41d2-842a-75506e129f62"],
+Cell[TextData[{
+Cell[BoxData[RowBox[{"MetricVielbein", "[", "\[Eta]", "]"}]], "InlineFormula",
+ ExpressionUUID->"a61dde14-c128-4fb1-bfdc-0e89dc96f83e"], "\[LineSeparator]returns ", Cell[BoxData[FormBox[
+  RowBox[{"{", " ", StyleBox["signature", "MR"], ",", "\[ThinSpace]", " ", "e", " ", "}"}],
+  TraditionalForm
+]], "InlineFormula"], " for the real symmetric metric ", Cell[BoxData[FormBox[
+  "\[Eta]",
+  TraditionalForm
+]], "InlineFormula"], ", where signature is ", Cell[BoxData[FormBox[
+  RowBox[{StyleBox["diag", "MR"], "(", StyleBox["Sign", "MR"], "(", StyleBox["eigenvalues", "MR"], ")", ")"}],
+  TraditionalForm
+]], "InlineFormula"], " and the vielbein ", Cell[BoxData[FormBox[
+  "e",
+  TraditionalForm
+]], "InlineFormula"], " satisfies ", Cell[BoxData[FormBox[
+  RowBox[{SuperscriptBox["\[ExponentialE]", StyleBox["T", "MR"]], " ", "\[NegativeThinSpace]", "\[CenterDot]", "\[NegativeThinSpace]", " ", StyleBox["signature", "MR"], " ", "\[NegativeThinSpace]", "\[CenterDot]", "\[NegativeThinSpace]", " ", "e", "=", "\[Eta]"}],
+  TraditionalForm
+]], "InlineFormula"], "."
+}], "Usage",
+ CellID->1248846710, ExpressionUUID->"4114b3fd-7a18-4712-b5b4-a441b87e1221"],
+Cell[TextData[{"The decomposition is constructed from the eigensystem of ", Cell[BoxData[FormBox[
+  "\[Eta]",
+  TraditionalForm
+]], "InlineFormula"], ": with eigenvalues ", Cell[BoxData[FormBox[
+  SubscriptBox["\[Lambda]", "i"],
+  TraditionalForm
+]], "InlineFormula"], " and orthonormal eigenvectors ", Cell[BoxData[FormBox[
+  SubscriptBox["v", "i"],
+  TraditionalForm
+]], "InlineFormula"], " stacked into rows of ", Cell[BoxData[FormBox[
+  "V",
+  TraditionalForm
+]], "InlineFormula"], ", signature is ", Cell[BoxData[FormBox[
+  RowBox[{StyleBox["diag", "MR"], "(", StyleBox["Sign", "MR"], "(", SubscriptBox["\[Lambda]", "i"], ")", ")"}],
+  TraditionalForm
+]], "InlineFormula"], " and the vielbein is ", Cell[BoxData[FormBox[
+  RowBox[{"e", "=", StyleBox["diag", "MR"], "(", SqrtBox[RowBox[{"\[VerticalSeparator]", " ", SubscriptBox["\[Lambda]", "i"], " ", "\[VerticalSeparator]"}]], ")", "\[CenterDot]", "V"}],
+  TraditionalForm
+]], "InlineFormula"], "."}], "Notes",
+ CellID->1010198616, ExpressionUUID->"0d20df53-72ca-430d-8330-c8c3d8e79ecf"],
+Cell[TextData[{"MetricVielbein expects a metric that is symmetric within tolerance ", Cell[BoxData[FormBox[
+  SuperscriptBox["10", RowBox[{"-", "12"}]],
+  TraditionalForm
+]], "InlineFormula"], "."}], "Notes",
+ CellID->1586794633, ExpressionUUID->"ffb71ccc-ee7a-41f0-9389-10f65b745835"],
+Cell[TextData[{"The vielbein is not unique: any rotation ", Cell[BoxData[FormBox[
+  RowBox[{"R", "\[Element]", "O", "(", "n", ")"}],
+  TraditionalForm
+]], "InlineFormula"], " applied as ", Cell[BoxData[FormBox[
+  RowBox[{"e", "\[RightArrow]", "R", "\[CenterDot]", "e"}],
+  TraditionalForm
+]], "InlineFormula"], " with ", Cell[BoxData[FormBox[
+  RowBox[{SuperscriptBox["R", StyleBox["T", "MR"]], " ", "\[NegativeThinSpace]", "\[CenterDot]", "\[NegativeThinSpace]", " ", StyleBox["signature", "MR"], " ", "\[NegativeThinSpace]", "\[CenterDot]", "\[NegativeThinSpace]", " ", "R", "=", StyleBox["signature", "MR"]}],
+  TraditionalForm
+]], "InlineFormula"], " yields another vielbein for the same metric. The form returned here is the eigenvector frame."}], "Notes",
+ CellID->2033824394, ExpressionUUID->"5c9f6f32-97f7-42b3-83db-11f2dd23e24a"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["See Also", "SeeAlsoSection",
+ CellID->523476251, ExpressionUUID->"a0a74767-bc9d-40d9-86c3-bad9da184381"],
+Cell[TextData[{
+Cell[BoxData[ButtonBox["FlatMetric",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/FlatMetric"]],
+ "InlineFormula", ExpressionUUID->"8a209e54-45b3-4658-af9f-83f76340d400"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["RandomCurvedMetric",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/RandomCurvedMetric"]],
+ "InlineFormula", ExpressionUUID->"3a277a0f-0c97-4810-9c2a-49466c393023"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["GammaMatrices",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/GammaMatrices"]],
+ "InlineFormula", ExpressionUUID->"02915be5-e52f-4c4d-9fac-3aea179d9480"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["Eigensystem",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/Eigensystem"]],
+ "InlineFormula", ExpressionUUID->"ecd9ec6d-7192-48a4-ae40-d9a5c58402df"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["DiagonalMatrix",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/DiagonalMatrix"]],
+ "InlineFormula", ExpressionUUID->"c460fe12-a271-4626-a639-9a09ff1e874e"], " \[FilledVerySmallSquare] ", Cell[BoxData[ButtonBox["SymmetricMatrixQ",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/ref/SymmetricMatrixQ"]],
+ "InlineFormula", ExpressionUUID->"f1876e60-2757-432c-baec-3b46c312ccfe"]
+}], "SeeAlso",
+ CellID->896815363, ExpressionUUID->"06431967-32de-411c-896a-252f2fb8f0be"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Tech Notes", "TechNotesSection",
+ CellID->778923855, ExpressionUUID->"ac11a953-7885-4442-aae8-d3371042e380"],
+Cell[" ", "Tutorials",
+ CellID->1855722418, ExpressionUUID->"e0af4e6c-c01e-41dd-a454-29ce78063316"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["More About", "MoreAboutSection",
+ CellID->1744334631, ExpressionUUID->"687a84e6-6484-451c-986a-737a1d44f3b6"],
+Cell[TextData[{
+Cell[BoxData[ButtonBox["DiracMatrix",
+ BaseStyle->"Link",
+ ButtonData->"paclet:DiracMatrix/guide/DiracMatrix"]],
+ "InlineFormula", ExpressionUUID->"8e1447fc-935e-48ee-b2f6-ebe8f38a6008"]
+}], "MoreAbout",
+ CellID->805574610, ExpressionUUID->"32627501-db6e-4d85-b5fb-6a6e82a09389"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1771403028, ExpressionUUID->"b15fc1a8-e9ba-4369-8f7a-2a2181942900"],
+Cell[" ", "RelatedLinks",
+ CellID->1322273541, ExpressionUUID->"c3ff16fc-fea5-43ee-b463-c6824df1ebe8"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Examples Initialization", "ExamplesInitializationSection",
+ CellID->189095367, ExpressionUUID->"b5894c58-b474-4885-8003-eaa01d5065f8"],
+Cell[BoxData[RowBox[{"Needs", "[", "\"DiracMatrix`\"", "]"}]], "ExampleInitialization",
+ CellID->1985560405, ExpressionUUID->"f29f4927-5da6-4b03-ba22-66d8cecf7dd1"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Basic Examples", "PrimaryExamplesSection",
+ CellID->747872269, ExpressionUUID->"635ea52d-b487-4848-a446-a72e9ba1321c"],
+Cell["The vielbein of FlatMetric returns the signature itself and an identity vielbein (up to ordering and signs):", "ExampleText",
+ CellID->1478627665, ExpressionUUID->"736296b2-6737-44ea-8e5d-37a1438cba34"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"MetricVielbein", "[", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]], "Input",
+ CellID->2146163404, ExpressionUUID->"c8f6eb5a-0c4e-4694-87e8-6e610d6b4375"],
+Cell[BoxData[RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{RowBox[{"-", "1"}], ",", "0", ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}], ",", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", "1", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellID->1281628133, ExpressionUUID->"e5546a78-7294-48ef-8a59-e2f6922bfcf7"]
+}, Open]],
+Cell[TextData[{"Round-trip: reconstructing ", Cell[BoxData[FormBox[
+  "\[Eta]",
+  TraditionalForm
+]], "InlineFormula"], " from the vielbein returns the original metric (House rule #3):"}], "ExampleText",
+ CellID->482598423, ExpressionUUID->"9a08e7b9-326e-40bb-89ea-c70c86e3cc00"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{RowBox[{"\[Eta]", " ", "=", " ", RowBox[{"FlatMetric", "[", RowBox[{"1", ",", " ", "3"}], "]"}]}], ",", " ", "sig", ",", " ", "e"}], "}"}], ",", "\n", "  ", RowBox[{RowBox[{RowBox[{"{", RowBox[{"sig", ",", " ", "e"}], "}"}], " ", "=", " ", RowBox[{"MetricVielbein", "[", "\[Eta]", "]"}]}], ";", "\n", "  ", RowBox[{RowBox[{RowBox[{"Transpose", "[", "e", "]"}], " ", ".", " ", "sig", " ", ".", " ", "e"}], " ", "===", " ", "\[Eta]"}]}]}], "]"}]], "Input",
+ CellID->55689599, ExpressionUUID->"55a41976-baaa-48cd-874f-d97db174ff3c"],
+Cell[BoxData["True"], "Output",
+ CellID->1404106484, ExpressionUUID->"2302c1c9-1cc7-4427-87f0-92dd6cda9f4d"]
+}, Open]]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["ExamplesSection", "ExtendedExamplesSection",
+ CellID->558811412, ExpressionUUID->"2ad1b3ea-0214-4feb-9bab-4c057b860e08"],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->"b6600459-3ab7-4f3a-8e16-1c2770cfef40"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->581143422, ExpressionUUID->"be93db1d-356b-43b4-a52c-d4fd7294da78"],
+Cell["Random curved metric", "ExampleSubsection",
+ CellID->472713212, ExpressionUUID->"f22a032d-163b-4920-b33a-eb475ea7e05c"],
+Cell["The vielbein of a random curved metric is a non-diagonal real matrix; the round-trip holds within tolerance:", "ExampleText",
+ CellID->1524628193, ExpressionUUID->"82eb5df5-f85c-4fb9-a843-7db6c8461cfe"],
+Cell[CellGroupData[{
+Cell[BoxData[{RowBox[{RowBox[{"SeedRandom", "[", "1", "]"}], ";"}], "\n", RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{"\[Eta]", ",", " ", "sig", ",", " ", "e"}], "}"}], ",", "\n", "  ", RowBox[{RowBox[{"\[Eta]", " ", "=", " ", RowBox[{"RandomCurvedMetric", "[", RowBox[{"2", ",", " ", "2", ",", " ", "0.5", ",", " ", "1"}], "]"}]}], ";", "\n", "  ", RowBox[{RowBox[{"{", RowBox[{"sig", ",", " ", "e"}], "}"}], " ", "=", " ", RowBox[{"MetricVielbein", "[", "\[Eta]", "]"}]}], ";", "\n", "  ", RowBox[{"NumericZeroQ", "[", RowBox[{RowBox[{RowBox[{"Transpose", "[", "e", "]"}], " ", ".", " ", "sig", " ", ".", " ", "e"}], " ", "-", " ", "\[Eta]"}], "]"}]}]}], "]"}]}], "Input",
+ CellID->690169732, ExpressionUUID->"47663c51-625d-4ff8-a06b-a26954ff553b"],
+Cell[BoxData["True"], "Output",
+ CellID->1744370015, ExpressionUUID->"fcd4afe4-cfdb-4e3f-8612-958582cde785"]
+}, Open]],
+Cell["Diagonal but non-flat metric", "ExampleSubsection",
+ CellID->1424797520, ExpressionUUID->"f61fb290-91f2-4e2b-bfc8-fab8b13172d1"],
+Cell[TextData[{"The Schwarzschild components on the equatorial plane at ", Cell[BoxData[FormBox[
+  RowBox[{"r", "=", "3", " ", "M"}],
+  TraditionalForm
+]], "InlineFormula"], " are diagonal but not ", Cell[BoxData[FormBox[
+  RowBox[{"\[PlusMinus]", " ", "1"}],
+  TraditionalForm
+]], "InlineFormula"], " — the vielbein is the diagonal matrix of square roots:"}], "ExampleText",
+ CellID->1266067729, ExpressionUUID->"c55c83b5-e14f-4a72-a43e-8f1ba57530b9"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"MetricVielbein", "[", "\n", "  ", RowBox[{"DiagonalMatrix", "[", RowBox[{"{", RowBox[{RowBox[{RowBox[{"-", "1"}], "/", "3"}], ",", " ", "3", ",", " ", "9", ",", " ", "9"}], "}"}], "]"}], "]"}]], "Input",
+ CellID->677118906, ExpressionUUID->"21aa29a5-8b42-46bf-94f0-44664f515b57"],
+Cell[BoxData[RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", "1", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", "0", ",", RowBox[{"-", "1"}]}], "}"}]}], "}"}], ",", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"0", ",", "0", ",", "0", ",", "3"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", "0", ",", "3", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{"0", ",", SqrtBox["3"], ",", "0", ",", "0"}], "}"}], ",", RowBox[{"{", RowBox[{FractionBox["1", SqrtBox["3"]], ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellID->899676625, ExpressionUUID->"a274b632-72a0-4dc6-bd76-3cc3f04323be"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->"55cd6daa-664d-4d1e-ad1a-587b71ed1d05"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->203161823, ExpressionUUID->"b9779cb6-c2ac-402a-9109-8150699cbd52"],
+Cell["Pulling back GammaMatrices through the vielbein", "ExampleSubsection",
+ CellID->547925727, ExpressionUUID->"bee9d0ce-bbb9-4ba2-a216-c504ffa199cd"],
+Cell[TextData[{"GammaMatrices uses MetricVielbein internally: the flat-space γ matrices on the signature are pulled back to the curved frame via ", Cell[BoxData[FormBox[
+  RowBox[{SuperscriptBox["\[Gamma]", "\[Mu]"], "=", SubsuperscriptBox["e", RowBox[{" ", "a"}], "\[Mu]"], " ", "\[ThinSpace]", " ", SuperscriptBox["\[CapitalGamma]", "a"]}],
+  TraditionalForm
+]], "InlineFormula"], ". Verify this gives the same matrices:"}], "ExampleText",
+ CellID->106696808, ExpressionUUID->"5a9b24c0-82a7-43d6-98ec-3c741ab60719"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{RowBox[{"\[Eta]", " ", "=", " ", RowBox[{"DiagonalMatrix", "[", RowBox[{"{", RowBox[{RowBox[{RowBox[{"-", "1"}], "/", "3"}], ",", " ", "3", ",", " ", "9", ",", " ", "9"}], "}"}], "]"}]}], ",", " ", "sig", ",", " ", "e"}], "}"}], ",", "\n", "  ", RowBox[{RowBox[{RowBox[{"{", RowBox[{"sig", ",", " ", "e"}], "}"}], " ", "=", " ", RowBox[{"MetricVielbein", "[", "\[Eta]", "]"}]}], ";", "\n", "  ", RowBox[{RowBox[{"GammaMatrices", "[", "\[Eta]", "]"}], " ", "===", " ", "\n", "    ", RowBox[{"TensorContract", "[", RowBox[{RowBox[{"TensorProduct", "[", RowBox[{"e", ",", " ", RowBox[{"GammaMatrices", "[", "sig", "]"}]}], "]"}], ",", " ", RowBox[{"{", RowBox[{"{", RowBox[{"1", ",", " ", "3"}], "}"}], "}"}]}], "]"}]}]}]}], "]"}]], "Input",
+ CellID->1616383369, ExpressionUUID->"47c756ff-0465-4c3a-b939-ef8294fca361"],
+Cell[BoxData["True"], "Output",
+ CellID->1563040730, ExpressionUUID->"27145cbe-e24d-4f7a-a303-42b6c6def46a"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->"e6a953ec-9cfd-474b-baad-411491af5b42"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1894957766, ExpressionUUID->"9406ee46-0c85-48b7-854d-86f7f9ac1388"],
+Cell["A non-symmetric matrix does not match the guard pattern and the call remains unevaluated:", "ExampleText",
+ CellID->1575455801, ExpressionUUID->"c5d8acc5-a648-4933-b03b-f54fad8cdf38"],
+Cell[CellGroupData[{
+Cell[BoxData[RowBox[{"MetricVielbein", "[", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"1", ",", " ", "2"}], "}"}], ",", " ", RowBox[{"{", RowBox[{"3", ",", " ", "4"}], "}"}]}], "}"}], "]"}]], "Input",
+ CellID->1993966114, ExpressionUUID->"77037fa4-7197-4c7c-9829-676aa259bc5c"],
+Cell[BoxData[RowBox[{"MetricVielbein", "[", RowBox[{"{", RowBox[{RowBox[{"{", RowBox[{"1", ",", "2"}], "}"}], ",", RowBox[{"{", RowBox[{"3", ",", "4"}], "}"}]}], "}"}], "]"}]], "Output",
+ CellID->1611215417, ExpressionUUID->"586d03f2-3d1c-4ebf-8e8c-021ebdff1115"]
+}, Open]],
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->"7dd3971d-f470-4cfa-8ce6-4a6433558b52"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1474375575, ExpressionUUID->"e4b3131b-4525-40df-b87e-c2c0bde0e295"],
+Cell["For a randomly generated curved metric, the signature returned by MetricVielbein always equals Sign[Eigenvalues[\[Eta]]] as a diagonal matrix:", "ExampleText",
+ CellID->873141767, ExpressionUUID->"6304d2f9-0cd4-4dcc-835a-a56ab1ec7359"],
+Cell[CellGroupData[{
+Cell[BoxData[{RowBox[{RowBox[{"SeedRandom", "[", "7", "]"}], ";"}], "\n", RowBox[{"Module", "[", RowBox[{RowBox[{"{", RowBox[{RowBox[{"\[Eta]", " ", "=", " ", RowBox[{"RandomCurvedMetric", "[", RowBox[{"2", ",", " ", "3", ",", " ", "0.5", ",", " ", "1"}], "]"}]}], ",", " ", "sig", ",", " ", "e"}], "}"}], ",", "\n", "  ", RowBox[{RowBox[{RowBox[{"{", RowBox[{"sig", ",", " ", "e"}], "}"}], " ", "=", " ", RowBox[{"MetricVielbein", "[", "\[Eta]", "]"}]}], ";", "\n", "  ", RowBox[{"sig", " ", "===", " ", RowBox[{"DiagonalMatrix", "[", RowBox[{"Sign", " ", "@", " ", RowBox[{"Eigenvalues", " ", "@", " ", "\[Eta]"}]}], "]"}]}]}]}], "]"}]}], "Input",
+ CellID->149050893, ExpressionUUID->"f74b5db0-0cb9-4b58-9c64-bef763fa8e2c"],
+Cell[BoxData["True"], "Output",
+ CellID->575251621, ExpressionUUID->"99cd837e-a905-4c11-8211-b3d18ca66a3c"]
+}, Open]]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Metadata", "MetadataSection",
+ CellID->1644989404, ExpressionUUID->"efaf47cb-a0ab-4ff9-9cda-45ae1331c1b4"],
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0.0", "HistoryData",
+  CellTags->"New", ExpressionUUID->"4867256b-a71c-42f8-a04a-4a07b4844ec4"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified", ExpressionUUID->"7d693c8f-9c27-4e6c-be5c-7630be911cce"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete", ExpressionUUID->"606fbb13-29b9-4d16-a571-d7b88529431c"]
+}], "History",
+ CellID->1203699519, ExpressionUUID->"94054298-119c-4a44-aa7c-11f22768868f"],
+Cell[CellGroupData[{
+Cell["Categorization", "CategorizationSection",
+ CellID->581076895, ExpressionUUID->"f3bd663d-1c02-4e56-871c-d9a00f5c328f"],
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->1804228388, ExpressionUUID->"3ea3d469-23f7-4c52-9937-df75ee298d31"],
+Cell["DiracMatrix", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->1083817455, ExpressionUUID->"4acd5b90-ce8a-4114-bf3e-35ef22b8e428"],
+Cell["DiracMatrix`", "Categorization",
+ CellLabel->"Context",
+ CellID->492876600, ExpressionUUID->"cd6e3959-ead0-4f2d-93fc-148ab251ac54"],
+Cell["DiracMatrix/ref/MetricVielbein", "Categorization",
+ CellLabel->"URI",
+ CellID->1440654094, ExpressionUUID->"e2d987a7-f647-4973-8550-c76be921d49f"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell["Keywords", "KeywordsSection",
+ CellID->1466248712, ExpressionUUID->"393e0c6c-83b1-405c-a819-6d9f388edb6f"],
+Cell["vielbein", "Keywords",
+ CellID->551933856, ExpressionUUID->"85115d9c-4ce9-4c73-adbe-7d111e0e9fc0"],
+Cell["tetrad", "Keywords",
+ CellID->1489123108, ExpressionUUID->"3b986e7f-2a98-4c5c-ad9c-0b8087275902"],
+Cell["frame field", "Keywords",
+ CellID->1315195631, ExpressionUUID->"e652d1b6-ed37-4df8-b906-7354c63ba6f4"],
+Cell["signature", "Keywords",
+ CellID->264703087, ExpressionUUID->"228df416-cab0-441f-b466-d916a1321d4c"],
+Cell["Clifford algebra", "Keywords",
+ CellID->1084650460, ExpressionUUID->"cf74d15c-9f72-41b7-870b-0cef5c50d053"],
+Cell["curved metric", "Keywords",
+ CellID->114489416, ExpressionUUID->"2bcb0c21-8a7a-4826-8e9f-1d607477f172"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->31082213, ExpressionUUID->"7f57f044-79cb-4376-8b57-097b13441fc5"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1071867386, ExpressionUUID->"0ed7288e-b296-488b-b74c-561e3146d481"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->2101947844, ExpressionUUID->"7bceb552-3287-422e-bcbc-c964f988f3cf"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->155006770, ExpressionUUID->"8c6be119-1c13-433e-afb7-fac6a84ea1fa"],
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->1094464066, ExpressionUUID->"4c9c955e-0048-4be3-b0ae-d612cad8e88a"]
+}, Closed]]
+}, Open]]
+
+},
+WindowSize->{1107, 652},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "DiracMatrix"|>,
+CellContext->"Global`",
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (February 17, 2026)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"c9a8bd8b-03c8-49a8-b92d-9ddca3faca91"
+]

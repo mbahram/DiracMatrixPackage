@@ -1,0 +1,241 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+(* Wolfram Notebook File *)
+(* http://www.wolfram.com/nb *)
+(* CreatedBy='build_guide_page.py' *)
+Notebook[{
+
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0.0", "HistoryData",
+  CellTags->"New", ExpressionUUID->"9830ac96-3dc5-42c9-91c0-4b11cccef1ae"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified", ExpressionUUID->"e0f69e3d-73cf-4393-8063-e7a5afb5df72"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete", ExpressionUUID->"99cd2b0b-9dfb-4896-b252-122d839aaf1c"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised", ExpressionUUID->"84e7fd52-c9db-4028-8ce7-3f39ed4fd898"]
+}], "History",
+ CellID->508615571, ExpressionUUID->"d4b45084-02e6-4249-9811-8fb2154a7c3b"],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->19588229, ExpressionUUID->"893bf71c-ceff-475e-bb04-f06a69fd3dc3"],
+
+Cell["DiracMatrix", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->967545347, ExpressionUUID->"b4ed62e7-3967-43ef-8ae8-13139a160318"],
+
+Cell["DiracMatrix`", "Categorization",
+ CellLabel->"Context",
+ CellID->1249883624, ExpressionUUID->"26a27281-7655-4014-a200-3c1cce5dc20e"],
+
+Cell["DiracMatrix/guide/DiracMatrix", "Categorization",
+ CellLabel->"URI",
+ CellID->1473069057, ExpressionUUID->"74bb0c01-6398-4b2f-bb39-750d856fed35"],
+
+Cell[CellGroupData[{
+Cell["Keywords", "KeywordsSection",
+ CellID->1322353403, ExpressionUUID->"9d9dae40-5c73-4d4a-9731-8dab65fcbe05"],
+Cell["Dirac matrices", "Keywords",
+ CellID->298570289, ExpressionUUID->"13892403-d94d-4855-814c-e80bca412f98"],
+Cell["gamma matrices", "Keywords",
+ CellID->1313767907, ExpressionUUID->"975745fa-af93-4aec-a57f-c3f6b63e0ad1"],
+Cell["Clifford algebra", "Keywords",
+ CellID->1106684675, ExpressionUUID->"9d9ef231-5938-4c9d-a2bb-671540fd757a"],
+Cell["Brauer-Weyl", "Keywords",
+ CellID->1691767198, ExpressionUUID->"18103a09-ef9c-428c-92d8-e2264948a539"],
+Cell["Pauli-Kronecker", "Keywords",
+ CellID->756705019, ExpressionUUID->"10ed44a2-ed21-4eab-bf46-fbeedea16870"],
+Cell["vielbein", "Keywords",
+ CellID->980106312, ExpressionUUID->"dc1caad0-e0e8-43fd-935d-e71b58f39ccc"],
+Cell["tetrad", "Keywords",
+ CellID->1730599233, ExpressionUUID->"19b8fb00-7f18-433b-89ba-cf5db603131e"],
+Cell["spinor", "Keywords",
+ CellID->1564536421, ExpressionUUID->"de33d3d9-c49f-4b20-8ad2-de097dfd63f9"],
+Cell["Dirac basis", "Keywords",
+ CellID->1231891261, ExpressionUUID->"ad1b6782-4694-45bf-b021-d83f705bcd81"],
+Cell["Weyl basis", "Keywords",
+ CellID->1572484726, ExpressionUUID->"d31015da-50a5-4775-a99d-e8f5d5b78ef9"],
+Cell["chiral basis", "Keywords",
+ CellID->750807320, ExpressionUUID->"6b785485-a67f-44bb-a276-7d621558e76a"],
+Cell["Minkowski", "Keywords",
+ CellID->1328531115, ExpressionUUID->"dd281805-d5c9-4e0c-bc2a-8475d4f86c5b"],
+Cell["signature", "Keywords",
+ CellID->1601667313, ExpressionUUID->"108298ed-86cd-40d4-8cf2-98eb3434437a"],
+Cell["curved spacetime", "Keywords",
+ CellID->1412871005, ExpressionUUID->"223beebc-017e-48a8-82f6-266d7fcea481"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["DiracMatrix", "GuideTitle",
+ CellID->799826245, ExpressionUUID->"87b2c46c-4c45-4f85-bcc6-e92fdc3f9b39"],
+Cell[TextData[{
+  "The DiracMatrix paclet constructs Dirac gamma matrices ",
+  Cell[BoxData[FormBox[
+  SuperscriptBox["\[Gamma]", "\[Mu]"],
+  TraditionalForm
+]], "InlineFormula"],
+  " that satisfy the Clifford anticommutation relation ",
+  Cell[BoxData[FormBox[
+  RowBox[{"{", " ", SuperscriptBox["\[Gamma]", "\[Mu]"], ",", SuperscriptBox["\[Gamma]", "\[Nu]"], " ", "}", "=", "2", " ", SuperscriptBox["\[Eta]", RowBox[{"\[Mu]", " ", "\[Nu]"}]], " ", StyleBox["I", FontFamily->"DoubleStruck"]}],
+  TraditionalForm
+]], "InlineFormula"],
+  " for an arbitrary real symmetric metric ",
+  Cell[BoxData[FormBox[
+  "\[Eta]",
+  TraditionalForm
+]], "InlineFormula"],
+  " in any dimension. The flat case uses the Brauer\[Dash]Weyl (Pauli\[Dash]Kronecker) construction; non-flat metrics are reached through a vielbein decomposition ",
+  Cell[BoxData[FormBox[
+  RowBox[{"g", "=", SuperscriptBox["\[ExponentialE]", StyleBox["T", "MR"]], "\[CenterDot]", "\[Eta]", "\[CenterDot]", "e"}],
+  TraditionalForm
+]], "InlineFormula"],
+  ". The package also provides basis transformations into the Dirac and Weyl (chiral) representations, and two implementations of the canonical graded Clifford operator basis: an explicit antisymmetrisation sum (pedagogically transparent) and an antisymmetric recursion (numerically stable, production-ready)."
+}], "GuideAbstract",
+ CellID->2121490076, ExpressionUUID->"6cd18568-f426-45d7-8bc9-7b39f88bb627"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["", "GuideFunctionsSection",
+ CellID->2057159451, ExpressionUUID->"f6e3259d-f2a6-4971-8648-dbf10800dad0"],
+Cell[CellGroupData[{
+Cell["Gamma matrices", "GuideFunctionsSubsection",
+ CellID->321203522, ExpressionUUID->"2b7f6617-c8ef-44a4-951c-d908607d6f4d"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["GammaMatrices",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/GammaMatrices"]],
+ "InlineGuideFunction", ExpressionUUID->"31fbdfbb-0bcf-4747-a68c-ed0767316919"],
+ " \[LongDash] n gamma matrices satisfying the Clifford relation for an arbitrary real symmetric metric in any dimension"
+}], "GuideText",
+ CellID->537179840, ExpressionUUID->"22853851-f777-47fd-b633-945d7798e646"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["EuclideanGammaMatrices",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/EuclideanGammaMatrices"]],
+ "InlineGuideFunction", ExpressionUUID->"9973ea17-7873-4148-a80d-1cbaf35b7cb4"],
+ " \[LongDash] flat Euclidean gamma matrices in the Brauer\[Dash]Weyl (Pauli\[Dash]Kronecker) representation"
+}], "GuideText",
+ CellID->1085639662, ExpressionUUID->"67eb4609-a6fc-41db-ae11-75ea5b1c7ee7"]
+}, Open]],
+Cell[CellGroupData[{
+Cell["Metrics and vielbeins", "GuideFunctionsSubsection",
+ CellID->728151911, ExpressionUUID->"4265c935-1f6f-43ee-a85a-9e8a6a8fc3c9"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["FlatMetric",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/FlatMetric"]],
+ "InlineGuideFunction", ExpressionUUID->"498f1446-15ff-444d-84d9-bf8d31a5ba10"],
+ " \[LongDash] diagonal flat metric of signature (p, q)"
+}], "GuideText",
+ CellID->1695579183, ExpressionUUID->"94857958-5ed1-4327-b3f9-72fa9b6e63b4"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["RandomCurvedMetric",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/RandomCurvedMetric"]],
+ "InlineGuideFunction", ExpressionUUID->"2d1b1363-5910-4aca-a8e6-0ead0546fcbe"],
+ " \[LongDash] random real symmetric non-diagonal metric of given signature, with a controllable condition number"
+}], "GuideText",
+ CellID->516547027, ExpressionUUID->"d0aa8390-7fa5-458d-962d-a6f9f021dd78"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["MetricVielbein",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/MetricVielbein"]],
+ "InlineGuideFunction", ExpressionUUID->"885fbf5d-2dcc-41d1-ba76-4ae4fa6d9472"],
+ " \[LongDash] vielbein decomposition ",
+ Cell[BoxData[FormBox[
+  RowBox[{SuperscriptBox["\[ExponentialE]", StyleBox["T", "MR"]], "\[CenterDot]", "\[Eta]", "\[CenterDot]", "e"}],
+  TraditionalForm
+]], "InlineFormula"],
+ " of a real symmetric metric"
+}], "GuideText",
+ CellID->1191325641, ExpressionUUID->"f553bf98-29e4-453b-8110-844ab423aa21"]
+}, Open]],
+Cell[CellGroupData[{
+Cell["Basis transformations", "GuideFunctionsSubsection",
+ CellID->1963400339, ExpressionUUID->"23b80c52-021a-4e2e-befc-7e7209a689bd"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["ToDiracBasis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/ToDiracBasis"]],
+ "InlineGuideFunction", ExpressionUUID->"0638e1e8-fba7-4008-ba8f-738fa1989f4e"],
+ " \[LongDash] transform gamma matrices from the Brauer\[Dash]Weyl basis to the Dirac basis (",
+ Cell[BoxData[FormBox[
+  SuperscriptBox["\[Gamma]", "0"],
+  TraditionalForm
+]], "InlineFormula"],
+ " diagonal)"
+}], "GuideText",
+ CellID->1579456642, ExpressionUUID->"1dd97a1c-e048-45e7-b2b5-1c70edde1215"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["ToWeylBasis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/ToWeylBasis"]],
+ "InlineGuideFunction", ExpressionUUID->"e72f4ed8-3566-4013-a6a4-0c2fc61c92ab"],
+ " \[LongDash] transform gamma matrices from the Brauer\[Dash]Weyl basis to the Weyl (chiral) basis"
+}], "GuideText",
+ CellID->1094046455, ExpressionUUID->"6f24d907-b40b-45a8-984a-1b7cb26daddc"]
+}, Open]],
+Cell[CellGroupData[{
+Cell["Canonical Clifford operator basis", "GuideFunctionsSubsection",
+ CellID->1393263082, ExpressionUUID->"6a7188b1-373d-4d32-a46f-4066c92fe2b5"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["CliffordBasis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/CliffordBasis"]],
+ "InlineGuideFunction", ExpressionUUID->"442086c5-582c-48f9-93a9-2957ba891668"],
+ " \[LongDash] graded Clifford operator basis built via an antisymmetric recursion \[Dash] numerically stable, production-ready"
+}], "GuideText",
+ CellID->109246224, ExpressionUUID->"55c3605a-6a86-475e-ab25-44f3b1db2609"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["CliffordCanonicalBasis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/CliffordCanonicalBasis"]],
+ "InlineGuideFunction", ExpressionUUID->"3e91365b-d190-4f76-8a37-644c71146ec5"],
+ " \[LongDash] graded Clifford operator basis built via the explicit antisymmetrisation sum \[Dash] pedagogically transparent but combinatorially expensive"
+}], "GuideText",
+ CellID->38818640, ExpressionUUID->"4d122b91-7016-4d10-a678-2ab801b0eecc"]
+}, Open]],
+Cell[CellGroupData[{
+Cell["Numerical utilities", "GuideFunctionsSubsection",
+ CellID->1910809803, ExpressionUUID->"3af33200-0cdb-488e-b78e-5d935d7e7350"],
+Cell[TextData[{
+ Cell[BoxData[ButtonBox["NumericZeroQ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:DiracMatrix/ref/NumericZeroQ"]],
+ "InlineGuideFunction", ExpressionUUID->"887a5f9e-157a-4b6e-b18e-c73173f72011"],
+ " \[LongDash] test whether every entry of an array is numerically zero, with a user-supplied tolerance"
+}], "GuideText",
+ CellID->1619737978, ExpressionUUID->"3300524e-658d-4d10-abd1-11fc08396ad9"]
+}, Open]]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["Tech Notes", "GuideTutorialsSection",
+ CellID->1068255364, ExpressionUUID->"7b3b825b-b09f-4a60-a034-84d858d19f17"],
+Cell[" ", "GuideTutorial",
+ CellID->1486793501, ExpressionUUID->"08fbc1df-3abc-41c4-aa84-bf18d94575a6"]
+}, Open]],
+
+Cell[CellGroupData[{
+Cell["More About", "GuideMoreAboutSection",
+ CellID->1207936879, ExpressionUUID->"a71ba12e-d3c2-4540-b841-d3a728076267"],
+Cell[" ", "GuideMoreAbout",
+ CellID->556917937, ExpressionUUID->"070d08f6-2907-44b7-a4a3-4753bd571a2e"]
+}, Open]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->25894747, ExpressionUUID->"5811bcac-7239-42b3-aff3-bb6c38b145ad"]
+
+},
+WindowSize->{900, 700},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "DiracMatrix"|>,
+CellContext->"Global`",
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (February 17, 2026)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"565d82d1-f65f-45af-a971-0426fa9c0b86"
+]
