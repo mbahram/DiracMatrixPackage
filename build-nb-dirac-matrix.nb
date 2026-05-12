@@ -1,0 +1,3514 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    180529,       3504]
+NotebookOptionsPosition[    177634,       3457]
+NotebookOutlinePosition[    178034,       3473]
+CellTagsIndexPosition[    177991,       3470]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PacletTools`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"01280bb5-6a11-4f2b-aa24-15290c7cfb0f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletBuild", 
+  "[", "\"\</Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.9821495158189907`*^9, 3.982149536329472*^9}, 
+   3.9821496091325483`*^9, {3.9821501755902653`*^9, 3.9821501804297743`*^9}, {
+   3.9875266297105303`*^9, 3.987526660955183*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"27e0996e-85a4-41ca-bb10-b9652691e44c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Permutations'\"", 2, 2, 1, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526671221574*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"70501267-c89b-4c9e-8cbb-471c8091bf00"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Signature'\"", 2, 2, 2, 33392833862081879488, "Local",
+    "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526671226762*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"05d768a1-f779-4a9b-aef3-d5371aea4b6b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/PauliMatrix'\"", 2, 2, 3, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526671986287*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"128b3d66-6a8c-4cc7-8fb0-4a7fcb9a0130"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/KroneckerProduct'\"", 2, 2, 4, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9875266719960203`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"71b3c41d-c56c-409a-bd4c-bc1ddeb5f778"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/DiagonalMatrix'\"", 2, 2, 5, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526672700745*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"8cab8dd0-0046-4283-924b-313c006699dc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Eigensystem'\"", 2, 2, 6, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526674303228*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"3409d2b9-d09d-425e-94eb-238be2241ff8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/DiagonalMatrix'\"", 2, 2, 7, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526674313778*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"9b2a4ca8-0865-476f-a044-086f587fc783"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/SymmetricMatrixQ'\"", 2, 2, 8, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526674368073*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"35ac0577-935f-4966-859b-ed447d9fa9fa"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Chop'\"", 2, 2, 9, 33392833862081879488, "Local", 
+   "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526675049264*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"e063a37f-d5b1-4181-975b-10f3b31aefd0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Norm'\"", 2, 2, 10, 33392833862081879488, "Local", 
+   "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526675060863*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"e9947db6-51ec-4310-a230-da6b2e1204a8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Flatten'\"", 2, 2, 11, 33392833862081879488, "Local", 
+   "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9875266751161013`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"1ba7ff45-bce1-4268-9a52-33923073ea28"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/CircularRealMatrixDistribution'\"", 2, 2, 12, 
+   33392833862081879488, "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9875266758361073`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"c2e0be09-7ad3-4167-b540-5468041909b1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/SeedRandom'\"", 2, 2, 13, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526675848428*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"a7db6ff3-d936-43da-a841-58351bf78828"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DocumentationBuild`DocumentationBuild", "warning", 
+   "\"warning: See Also section link to unknown URI has been removed: \
+'paclet:DiracMatrix/ref/Eigensystem'\"", 2, 2, 14, 33392833862081879488, 
+   "Local", "DocumentationBuild`DocumentationBuild"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526676579805*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"70dfdc6f-5409-42f9-b12d-73b21a044a29"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Success",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"PacletArchive\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/build/DiracMatrix-1.0.0.paclet\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "16.817482`", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[Checkmark]\"", 
+              Directive[
+               RGBColor[
+               0.3607843137254902, 0.596078431372549, 0.3803921568627451], 
+               25], StripOnInput -> False], ContentPadding -> False, 
+             FrameStyle -> None, FrameMargins -> {{0, 0}, {0, 0}}, 
+             StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"PacletArchive\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/build/DiracMatrix-1.0.0.paclet\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "16.817482`", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  
+                  TemplateBox[{"\"BuildPacletDirectory\"", "\": \""}, 
+                   "RowDefault"], "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{"File", "[", 
+                    TemplateBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/build/DiracMatrix\""}, "FileArgument"], "]"}], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"PacletManifest\"", "\": \""}, "RowDefault"],
+                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   TagBox[
+                    
+                    DynamicModuleBox[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+                    "InitialData" -> <|
+                    "Files" -> {<|
+                    "File" -> File["Kernel/DiracMatrix.wl"], "Hash" -> 
+                    "c82ef9aea74374381e36018c921fc76ece535f10152071695144b0e4c\
+b0508bd"|>, <|"File" -> File["Documentation/English/Guides/DiracMatrix.nb"], 
+                    "Hash" -> 
+                    "4eb0680199d648e11fe7a967feababe0e48b17a9628ca7418565fa0ea\
+add758d"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+CliffordBasis.nb"], "Hash" -> 
+                    "11d1ff0009c2fc89ca4b1540ee3fd62adc0228f03681db490bcb73a76\
+238543c"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb"], "Hash" -> 
+                    "257a22d251e83d0756d61e002d80c7ee0b02578c4d68f995e73af4e8f\
+81dc434"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb"], "Hash" -> 
+                    "d85de784c9d96a15fab02f31c719f83942e524b61396c2a63bc9009d8\
+cfc58e0"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+FlatMetric.nb"], "Hash" -> 
+                    "b0758d84746caa144db2e954a6436dfe95bc0264d65dab84eb2565674\
+276608e"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+GammaMatrices.nb"], "Hash" -> 
+                    "fb1801919fd2f322435da36d8f00797dc7663cf03ecf02a360993916e\
+879dbea"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+MetricVielbein.nb"], "Hash" -> 
+                    "f8e3a491e397076eca0be3b906c8dbcc65805c87843f596d7f494dd35\
+78bb7e6"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+NumericZeroQ.nb"], "Hash" -> 
+                    "8535752876d584dbea3f11b3ce6a824cdf9b2a606045574c387179ca4\
+2f9c24f"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb"], "Hash" -> 
+                    "6af2daa240c0f900d2402b8d27829950e8a42522dffff94b16eb63bb0\
+82ffaee"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+ToDiracBasis.nb"], "Hash" -> 
+                    "ab116cbdf67640a16cbed1fbb9a9526d64e33bc7f32d03493d46e71bb\
+c17a72b"|>, <|"File" -> 
+                    File["Documentation/English/ReferencePages/Symbols/\
+ToWeylBasis.nb"], "Hash" -> 
+                    "463253cd3fafcf0fe9c6ae2751e1bc13a171f3a267a0117cbeea59b51\
+43a663d"|>}|>, "AllowEmbedding" -> True, "InitialShape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|
+                    "File" -> TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 12, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "InitialType" -> 
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 12], 1], "Meta" -> <||>, 
+                    "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|
+                    "File" -> TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 12, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "Type" -> TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 12], 1], "Path" -> {}, 
+                    "DisplayedRowCount" -> 1, "DisplayedColumnCount" -> 2, 
+                    "DataRowCount" -> 1, "DataColumnCount" -> 2, 
+                    "SortPaths" -> {}, "SortDirections" -> {}, 
+                    "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+                    DynamicModule[{
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+                    Style[
+                    Grid[{{
+                    Item[
+                    Pane[
+                    Annotation[
+                    Mouseover[
+                    
+                    Graphics[{}, ImageSize -> 6, BaselinePosition -> 
+                    Scaled[-0.15]], 
+                    Graphics[{
+                    RGBColor[
+                    0.6000839236379029, 0.6000839236379029, 
+                    0.6000839236379029], 
+                    
+                    Polygon[{{2^Rational[-1, 2], -2^Rational[-1, 2]}, {
+                    2^Rational[-1, 2], 2^
+                    Rational[-1, 2]}, {-2^Rational[-1, 2], 2^
+                    Rational[-1, 2]}, {-2^Rational[-1, 2], -2^
+                    Rational[-1, 2]}}]}, ImageSize -> 6, BaselinePosition -> 
+                    Scaled[-0.15]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, Keys}, "KeyDummy", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    RGBColor[0.9500473017990948, 0.9500473017990948, 
+                    0.9500473017990948], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["File", 
+                    Style[
+                    "File", FontColor -> RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "File"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "File"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    RGBColor[0.9500473017990948, 0.9500473017990948, 
+                    0.9500473017990948], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Hash", 
+                    Style[
+                    "Hash", FontColor -> RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "Hash"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "Hash"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    RGBColor[0.9500473017990948, 0.9500473017990948, 
+                    0.9500473017990948], Alignment -> {Left, Baseline}]}, {
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Files", 
+                    Style[
+                    "Files", FontColor -> 
+                    RGBColor[0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Files"]}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"]}, "RowHeader", False], "Mouse"], 
+                    ImageSize -> {{56.00000000000001, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    RGBColor[0.9500473017990948, 0.9500473017990948, 
+                    0.9500473017990948], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Kernel/DiracMatrix.wl"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "c82ef9aea74374381e36018c921fc76ece535f10152071695144b0e4c\
+b0508bd", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Documentation/English/Guides/DiracMatrix.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "4eb0680199d648e11fe7a967feababe0e48b17a9628ca7418565fa0ea\
+add758d", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+CliffordBasis.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 3, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "11d1ff0009c2fc89ca4b1540ee3fd62adc0228f03681db490bcb73a76\
+238543c", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 3, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 4, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "257a22d251e83d0756d61e002d80c7ee0b02578c4d68f995e73af4e8f\
+81dc434", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 4, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    
+                    "Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 5, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "d85de784c9d96a15fab02f31c719f83942e524b61396c2a63bc9009d8\
+cfc58e0", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 5, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/FlatMetric.\
+nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 6, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "b0758d84746caa144db2e954a6436dfe95bc0264d65dab84eb2565674\
+276608e", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 6, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+GammaMatrices.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 7, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "fb1801919fd2f322435da36d8f00797dc7663cf03ecf02a360993916e\
+879dbea", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 7, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+MetricVielbein.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 8, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "f8e3a491e397076eca0be3b906c8dbcc65805c87843f596d7f494dd35\
+78bb7e6", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 8, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+NumericZeroQ.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 9, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "8535752876d584dbea3f11b3ce6a824cdf9b2a606045574c387179ca4\
+2f9c24f", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 9, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 10, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "6af2daa240c0f900d2402b8d27829950e8a42522dffff94b16eb63bb0\
+82ffaee", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 10, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/\
+ToDiracBasis.nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 11, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "ab116cbdf67640a16cbed1fbb9a9526d64e33bc7f32d03493d46e71bb\
+c17a72b", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 11, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File[
+                    "Documentation/English/ReferencePages/Symbols/ToWeylBasis.\
+nb"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 12, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "463253cd3fafcf0fe9c6ae2751e1bc13a171f3a267a0117cbeea59b51\
+43a663d", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 12, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}}, 
+                    BaseStyle -> {
+                    ContextMenu -> 
+                    Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger, TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu,
+                     True, TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger = 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                    Block[{TypeSystem`NestedGrid`PackagePrivate`$\
+globalScrollPos = {TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                    
+                    With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+                    "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, 
+                    Dividers -> All, FrameStyle -> 
+                    RGBColor[0.749003690406716, 0.749003690406716, 
+                    0.749003690406716], Spacings -> {0, 0}, Alignment -> Left,
+                     BaseStyle -> {
+                    FontFamily -> "Source Sans Pro", FontSize -> 14, 
+                    FontWeight -> Plain}], LineBreakWithin -> False, 
+                    ContextMenu -> {}, NumberMarks -> False, ShowAutoStyles -> 
+                    False]], TypeSystem`NestedGrid`PackagePrivate`initialQ = 
+                    True}, 
+                    Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+                    
+                    Module[{
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`datasetData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                    TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+                    Not[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+                    TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+                    TypeSystem`SparseGrid[
+                    TypeSystem`H["(data no longer present)"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+                    DynamicModuleValues :> {}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+                    TypeSystem`PackageScope`SubViewPathbar[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = 
+                    Dynamic[
+                    Replace[
+                    Replace[
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+                    Blank[]] -> "", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    Blank[]], 
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+                    Blank[]], 
+                    Pattern[
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Blank[]]] :> (
+                    Increment[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+                    TypeSystem`NestedGrid`PackagePrivate`path$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+                    TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+                    TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathElements]), 
+                    Null :> Spacer[10], Blank[] :> Spacer[10]}], 
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`bar, 
+                    Except[
+                    Alternatives[
+                    Blank[Spacer], ""]]] :> 
+                    TypeSystem`NestedGrid`PackagePrivate`makeFramedPathbar[
+                    TypeSystem`NestedGrid`PackagePrivate`bar]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}, 
+                    DynamicWrapperBox[
+                    DynamicBox[
+                    ToBoxes[
+                    Dataset`DatasetContent[
+                    2, "Path" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+                    "Grid" -> Hold[
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    "VPos" -> Hold[
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], 
+                    "TopBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], 
+                    "BottomBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], 
+                    "OutputID" -> Hold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], 
+                    StandardForm], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+                    MouseAnnotation[]], 
+                    Initialization :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+                    CreateUUID[]), DynamicModuleValues :> {}, 
+                    BaseStyle -> {
+                    LineBreakWithin -> False, 
+                    LightDarkAutoColorRules -> <|"MarkedColors" -> True|>}, 
+                    UnsavedVariables :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$}], 
+                    Deploy, DefaultBaseStyle -> "Deploy"], 
+                   Dataset`InterpretDataset[1], Selectable -> False, Editable -> 
+                   False, SelectWithContents -> True], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  
+                  TemplateBox[{"\"DocumentationBuildResults\"", "\": \""}, 
+                   "RowDefault"], "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{"{", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"13.227124`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"13.227124`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MaximumFileTime\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    
+                    TemplateBox[{"5.510387`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], ",", 
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb\""}], "}"}], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFiles\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb\"", "\[Rule]", 
+                    
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{"5.510387`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"5.510387`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[5.510387, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/CliffordBasis.\
+nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.761519`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.761519`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.761519, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.783532`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.783532`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.783532, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.787378`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.787378`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.787378, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/FlatMetric.nb\
+\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.68864`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.68864`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.68864, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/GammaMatrices.\
+nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.904691`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.904691`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.904691, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+MetricVielbein.nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.751682`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.751682`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.751682, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/NumericZeroQ.\
+nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.772171`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{
+                    Automatic}}}, BaseStyle -> {ShowStringCharacters -> False,
+                     NumberMarks -> False, PrintPrecision -> 3, 
+                    ShowSyntaxStyles -> False}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.772171`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.772171, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.741226`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.741226`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.741226, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToDiracBasis.\
+nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.712098`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.712098`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.712098, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}], ",", 
+                    
+                    RowBox[{
+                    "\"/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToWeylBasis.\
+nb\"", "\[Rule]", 
+                    InterpretationBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.778768`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Action\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"Build\"", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.778768`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"ProcessedNotebook\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "ProcessedNotebook", <|"Action" -> "Build", "Time" -> 
+                    Quantity[0.778768, "Seconds"]|>], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True]}]}], 
+                    "\[RightAssociation]"}], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"FailedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PercentSucceeded\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"100.`", "\"%\"", "percent", "\"Percent\""}, 
+                    "QuantityPostfix", SyntaxForm -> Mod], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["11", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SuccessfulFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["11", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SkippedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"TargetWolframVersionNumber\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["13", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"DocumentationBuild\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Success[
+                    "DocumentationBuild", <|
+                    "TotalTime" -> Quantity[13.227124, "Seconds"], 
+                    "MaximumFileTime" -> {
+                    Quantity[5.510387, "Seconds"], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb"}, 
+                    "ProcessedFiles" -> <|
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb" -> 
+                    Success[
+                    "ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[5.510387, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/CliffordBasis.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.761519, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb" -> 
+                    Success[
+                    "ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.783532, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb" -> 
+                    Success[
+                    "ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.787378, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/FlatMetric.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.68864, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/GammaMatrices.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.904691, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+MetricVielbein.nb" -> Success[
+                    "ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.751682, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/NumericZeroQ.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.772171, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb" -> Success[
+                    "ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.741226, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToDiracBasis.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.712098, "Seconds"]|>], 
+                    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToWeylBasis.\
+nb" -> Success["ProcessedNotebook", <|
+                    "Action" -> "Build", "Time" -> 
+                    Quantity[0.778768, "Seconds"]|>]|>, "FailedFilesCount" -> 
+                    0, "PercentSucceeded" -> Quantity[100., "Percent"], 
+                    "ProcessedFilesCount" -> 11, "SuccessfulFilesCount" -> 11,
+                     "SkippedFilesCount" -> 0, "MessageTemplate" -> 
+                    "Documentation build completed successfully.", 
+                    "TargetWolframVersionNumber" -> 13|>], Selectable -> 
+                    False, Editable -> False, SelectWithContents -> True], 
+                    "}"}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["\"PacletBuild\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Success[
+  "PacletBuild", <|
+   "PacletArchive" -> 
+    "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/DiracMatrixPackage/\
+build/DiracMatrix-1.0.0.paclet", "TotalTime" -> 
+    Quantity[16.817482, "Seconds"], "BuildPacletDirectory" -> 
+    File["/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/build/DiracMatrix"], "PacletManifest" -> 
+    Dataset[<|"Files" -> {<|
+         "File" -> File["Kernel/DiracMatrix.wl"], "Hash" -> 
+          "c82ef9aea74374381e36018c921fc76ece535f10152071695144b0e4cb0508bd"|>\
+, <|"File" -> File["Documentation/English/Guides/DiracMatrix.nb"], "Hash" -> 
+          "4eb0680199d648e11fe7a967feababe0e48b17a9628ca7418565fa0eaadd758d"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/CliffordBasis.\
+nb"], "Hash" -> 
+          "11d1ff0009c2fc89ca4b1540ee3fd62adc0228f03681db490bcb73a76238543c"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb"], "Hash" -> 
+          "257a22d251e83d0756d61e002d80c7ee0b02578c4d68f995e73af4e8f81dc434"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb"], "Hash" -> 
+          "d85de784c9d96a15fab02f31c719f83942e524b61396c2a63bc9009d8cfc58e0"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/FlatMetric.nb"], 
+          "Hash" -> 
+          "b0758d84746caa144db2e954a6436dfe95bc0264d65dab84eb2565674276608e"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/GammaMatrices.\
+nb"], "Hash" -> 
+          "fb1801919fd2f322435da36d8f00797dc7663cf03ecf02a360993916e879dbea"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/MetricVielbein.\
+nb"], "Hash" -> 
+          "f8e3a491e397076eca0be3b906c8dbcc65805c87843f596d7f494dd3578bb7e6"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/NumericZeroQ.nb"]\
+, "Hash" -> 
+          "8535752876d584dbea3f11b3ce6a824cdf9b2a606045574c387179ca42f9c24f"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb"], "Hash" -> 
+          "6af2daa240c0f900d2402b8d27829950e8a42522dffff94b16eb63bb082ffaee"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/ToDiracBasis.nb"]\
+, "Hash" -> 
+          "ab116cbdf67640a16cbed1fbb9a9526d64e33bc7f32d03493d46e71bbc17a72b"|>\
+, <|"File" -> 
+          File["Documentation/English/ReferencePages/Symbols/ToWeylBasis.nb"],
+           "Hash" -> 
+          "463253cd3fafcf0fe9c6ae2751e1bc13a171f3a267a0117cbeea59b5143a663d"|>\
+}|>, 
+      TypeSystem`Assoc[
+       TypeSystem`Atom[String], 
+       TypeSystem`Vector[
+        TypeSystem`Struct[{"File", "Hash"}, {
+          TypeSystem`Atom[File], 
+          TypeSystem`Atom[String]}], 12], 1], <||>], 
+    "DocumentationBuildResults" -> {
+      Success[
+      "DocumentationBuild", <|
+       "TotalTime" -> Quantity[13.227124, "Seconds"], "MaximumFileTime" -> {
+          Quantity[5.510387, "Seconds"], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb"}, 
+        "ProcessedFiles" -> <|
+         "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/Guides/DiracMatrix.nb" -> 
+          Success["ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[5.510387, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/CliffordBasis.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.761519, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+CliffordCanonicalBasis.nb" -> 
+          Success["ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.783532, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+EuclideanGammaMatrices.nb" -> 
+          Success["ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.787378, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/FlatMetric.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.68864, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/GammaMatrices.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.904691, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+MetricVielbein.nb" -> 
+          Success["ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.751682, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/NumericZeroQ.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.772171, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/\
+RandomCurvedMetric.nb" -> 
+          Success["ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.741226, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToDiracBasis.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.712098, "Seconds"]|>], 
+          "/Users/mohammadb/Nextcloud/Mads/Quantum/DiracMatrix/\
+DiracMatrixPackage/Documentation/English/ReferencePages/Symbols/ToWeylBasis.\
+nb" -> Success[
+           "ProcessedNotebook", <|
+            "Action" -> "Build", "Time" -> Quantity[0.778768, "Seconds"]|>]|>,
+         "FailedFilesCount" -> 0, "PercentSucceeded" -> 
+        Quantity[100., "Percent"], "ProcessedFilesCount" -> 11, 
+        "SuccessfulFilesCount" -> 11, "SkippedFilesCount" -> 0, 
+        "MessageTemplate" -> "Documentation build completed successfully.", 
+        "TargetWolframVersionNumber" -> 13|>]}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.98752668072616*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"c3486160-0a71-4271-b29e-d354ca11b794"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"PacletInstall", "[", 
+  RowBox[{"\"\<https://github.com/mbahram/DiracMatrixPackage/blob/main/build/\
+DiracMatrix-1.0.0.paclet\>\"", ",", 
+   RowBox[{"ForceVersionInstall", "->", "True"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "[", "\"\<DiracMatrix`\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.982145842161879*^9, 3.982145851594586*^9}, {
+   3.9821467470379257`*^9, 3.982146748594632*^9}, 3.982150320208486*^9, {
+   3.987526687868354*^9, 3.9875266918917913`*^9}, {3.987526851330986*^9, 
+   3.9875268523581457`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"cb7de1d1-0a59-445b-9590-c36e2644c2c0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "PacletManager`CreatePaclet", "badppi", 
+   "\"The paclet \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"/private/var/folders/mq/8g7nsvxx0r71rfwd_\
+4jm8zz8000_kp/T/temp94802368.paclet\\\\\\\"\\\"}]\\) does not have a properly \
+formatted PacletInfo.wl or PacletInfo.m file. You can use the VerifyPaclet \
+function to get more detailed information about the error.\"", 2, 1, 1, 
+   33392835336676000916, "Local", "PacletManager`CreatePaclet"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.987526856577067*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"ac63275b-8197-4b72-9749-34f381a5fc9e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "PacletInstall", "instl", 
+   "\"An error occurred installing paclet from file \\!\\(\\*RowBox[{\\\"\\\\\
+\\\"/private/var/folders/mq/8g7nsvxx0r71rfwd_4jm8zz8000_kp/T/temp94802368.\
+paclet\\\\\\\"\\\"}]\\): \\!\\(\\*RowBox[{\\\"\\\\\\\"Not a valid \
+paclet\\\\\\\"\\\"}]\\). \\!\\(\\*RowBox[{\\\"\\\\\\\"\\\\\\\"\\\"}]\\)\"", 2,
+    1, 2, 33392835336676000916, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9875268565809317`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"f844f9e5-0f7b-4e1b-b351-64a5db73f798"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.9875266952102013`*^9, 3.987526856583568*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"04ee16e4-af3d-4dfd-8e78-95348080e902"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Names", "[", "\"\<DiracMatrix`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.9875267243735123`*^9, 3.987526726976458*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"8817e388-0187-4bda-921c-4d9bfc5d9433"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"CliffordBasis\"\>", ",", "\<\"CliffordCanonicalBasis\"\>", 
+   ",", "\<\"EuclideanGammaMatrices\"\>", ",", "\<\"FlatMetric\"\>", 
+   ",", "\<\"GammaMatrices\"\>", ",", "\<\"MetricVielbein\"\>", 
+   ",", "\<\"NumericZeroQ\"\>", ",", "\<\"RandomCurvedMetric\"\>", 
+   ",", "\<\"ToDiracBasis\"\>", ",", "\<\"ToWeylBasis\"\>"}], "}"}]], "Output",\
+
+ CellChangeTimes->{{3.987526724944807*^9, 3.98752672733333*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"6378a9f9-6eab-4a76-9e13-1185b4872bbe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "CliffordBasis"}]], "Input",
+ CellChangeTimes->{{3.987526733293681*^9, 3.9875267334500523`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"739ebff7-7c97-435e-ad74-2c302d417099"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:DiracMatrix/ref/CliffordBasis",
+              ButtonNote->"paclet:DiracMatrix/ref/CliffordBasis"],
+             "\"paclet:DiracMatrix/ref/CliffordBasis\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CliffordBasis[\[Eta]] returns the canonical graded \
+Clifford operator basis using the antisymmetrised recursion \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\\"\[ScriptCapitalI] \[Union] {\
+\[Mu]}\\\"]\\) = \\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\(\
+\[ScriptCapitalI]\\)]\\) \[CenterDot] \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\(\[Mu]\\)]\\) - \
+\\!\\(\\*SubsuperscriptBox[\\(\[Sum]\\), \\\"j = 1\\\", \
+\\\"|\[ScriptCapitalI]|\\\"]\\) \\!\\(\\*SuperscriptBox[\\((\\(-1\\))\\), \
+\\\"j - 1\\\"]\\) \\!\\(\\*SubscriptBox[\\(\[Eta]\\), \\\"\[Mu], i_j\\\"]\\) \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\\"\[ScriptCapitalI] \
+\[Backslash] {i_j}\\\"]\\). Much faster than CliffordCanonicalBasis and \
+numerically stable; agrees with it on flat metrics at all grades.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"CliffordBasis", "[", 
+                    RowBox[{"DiracMatrix`Private`\[Eta]_", "/;", 
+                    RowBox[{"SymmetricMatrixQ", "[", 
+                    RowBox[{"DiracMatrix`Private`\[Eta]", ",", 
+                    RowBox[{"Tolerance", "\[Rule]", 
+                    FractionBox["1", 
+                    SuperscriptBox["10", "12"]]}]}], "]"}]}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"DiracMatrix`Private`n", ",", 
+                    "DiracMatrix`Private`\[Gamma]", ",", 
+                    "DiracMatrix`Private`d", ",", 
+                    "DiracMatrix`Private`\[CapitalGamma]"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"DiracMatrix`Private`n", "=", 
+                    
+                    RowBox[{"Length", "[", "DiracMatrix`Private`\[Eta]", 
+                    "]"}]}], ";", 
+                    RowBox[{"DiracMatrix`Private`\[Gamma]", "=", 
+                    
+                    RowBox[{"GammaMatrices", "[", 
+                    "DiracMatrix`Private`\[Eta]", "]"}]}], ";", 
+                    RowBox[{"DiracMatrix`Private`d", "=", 
+                    RowBox[{"Length", "[", 
+                    
+                    RowBox[{"DiracMatrix`Private`\[Gamma]", 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                    "]"}]}], ";", 
+                    RowBox[{"DiracMatrix`Private`\[CapitalGamma]", "=", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"{", "}"}], "\[Rule]", 
+                    
+                    RowBox[{"IdentityMatrix", "[", "DiracMatrix`Private`d", 
+                    "]"}]}], "]"}]}], ";", 
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"DiracMatrix`Private`\[CapitalGamma]", "[", 
+                    RowBox[{"{", "DiracMatrix`Private`\[Mu]", "}"}], "]"}], 
+                    "=", 
+                    
+                    RowBox[{"DiracMatrix`Private`\[Gamma]", 
+                    "\[LeftDoubleBracket]", "DiracMatrix`Private`\[Mu]", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"DiracMatrix`Private`\[Mu]", ",", 
+                    "DiracMatrix`Private`n"}], "}"}]}], "]"}], ";", 
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{"With", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"DiracMatrix`Private`is", "=", 
+                    "DiracMatrix`Private`sub"}], "}"}], ",", 
+                    RowBox[{
+                    
+                    RowBox[{"DiracMatrix`Private`\[CapitalGamma]", "[", 
+                    "DiracMatrix`Private`is", "]"}], "=", 
+                    RowBox[{"DiracMatrix`Private`gammaAppendAntisym", "[", 
+                    
+                    RowBox[{"DiracMatrix`Private`\[Eta]", ",", 
+                    "DiracMatrix`Private`\[Gamma]", ",", 
+                    "DiracMatrix`Private`\[CapitalGamma]", ",", 
+                    RowBox[{"Most", "[", "DiracMatrix`Private`is", "]"}], ",", 
+                    RowBox[{"Last", "[", "DiracMatrix`Private`is", "]"}]}], 
+                    "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"DiracMatrix`Private`sub", ",", 
+                    RowBox[{"Subsets", "[", 
+                    RowBox[{
+                    RowBox[{"Range", "[", "DiracMatrix`Private`n", "]"}], ",", 
+                    RowBox[{"{", "DiracMatrix`Private`k", "}"}]}], "]"}]}], 
+                    "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"DiracMatrix`Private`k", ",", "2", ",", 
+                    "DiracMatrix`Private`n"}], "}"}]}], "]"}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"DiracMatrix`Private`\[CapitalGamma]", "/@", 
+                    RowBox[{"Subsets", "[", 
+                    RowBox[{
+                    RowBox[{"Range", "[", "DiracMatrix`Private`n", "]"}], ",", 
+                    RowBox[{"{", "DiracMatrix`Private`k", "}"}]}], "]"}]}], 
+                    ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"DiracMatrix`Private`k", ",", "0", ",", 
+                    "DiracMatrix`Private`n"}], "}"}]}], "]"}]}]}], "]"}]}]}, {
+                   " "}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", 
+                    "paclet:DiracMatrix/ref/CliffordBasis", 
+                    "paclet:DiracMatrix/ref/CliffordBasis", "Link", {
+                    LightDarkSwitched[
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]]}, 
+                    BaseStyle -> {
+                    LightDarkSwitched[
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"DiracMatrix`CliffordBasis\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {3.634033203125, 9.365966796875}}], 
+               True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {3.634033203125, 9.365966796875}}]}, 
+               Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:DiracMatrix/ref/CliffordBasis",
+              ButtonNote->"paclet:DiracMatrix/ref/CliffordBasis"],
+             "\"paclet:DiracMatrix/ref/CliffordBasis\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"CliffordBasis[\[Eta]] returns the canonical graded \
+Clifford operator basis using the antisymmetrised recursion \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\\"\[ScriptCapitalI] \[Union] {\
+\[Mu]}\\\"]\\) = \\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\(\
+\[ScriptCapitalI]\\)]\\) \[CenterDot] \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\(\[Mu]\\)]\\) - \
+\\!\\(\\*SubsuperscriptBox[\\(\[Sum]\\), \\\"j = 1\\\", \
+\\\"|\[ScriptCapitalI]|\\\"]\\) \\!\\(\\*SuperscriptBox[\\((\\(-1\\))\\), \
+\\\"j - 1\\\"]\\) \\!\\(\\*SubscriptBox[\\(\[Eta]\\), \\\"\[Mu], i_j\\\"]\\) \
+\\!\\(\\*SubscriptBox[\\(\[CapitalGamma]\\), \\\"\[ScriptCapitalI] \
+\[Backslash] {i_j}\\\"]\\). Much faster than CliffordCanonicalBasis and \
+numerically stable; agrees with it on flat metrics at all grades.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {1.143798828125, 8.856201171875}}], True->
+              
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {1.143798828125, 8.856201171875}}]}, 
+              Dynamic[System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "CliffordBasis[\[Eta]] returns the canonical graded Clifford operator \
+basis using the antisymmetrised recursion \
+\!\(\*SubscriptBox[\(\[CapitalGamma]\), \"\[ScriptCapitalI] \[Union] \
+{\[Mu]}\"]\) = \!\(\*SubscriptBox[\(\[CapitalGamma]\), \(\[ScriptCapitalI]\)]\
+\) \[CenterDot] \!\(\*SubscriptBox[\(\[CapitalGamma]\), \(\[Mu]\)]\) - \
+\!\(\*SubsuperscriptBox[\(\[Sum]\), \"j = 1\", \"|\[ScriptCapitalI]|\"]\) \
+\!\(\*SuperscriptBox[\((\(-1\))\), \"j - 1\"]\) \
+\!\(\*SubscriptBox[\(\[Eta]\), \"\[Mu], i_j\"]\) \!\(\*SubscriptBox[\(\
+\[CapitalGamma]\), \"\[ScriptCapitalI] \[Backslash] {i_j}\"]\). Much faster \
+than CliffordCanonicalBasis and numerically stable; agrees with it on flat \
+metrics at all grades.", 
+    "Documentation" -> <|"Local" -> "paclet:DiracMatrix/ref/CliffordBasis"|>, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, DiracMatrix`CliffordBasis, {DiracMatrix`CliffordBasis[
+         Condition[
+          Pattern[DiracMatrix`Private`\[Eta], 
+           Blank[]], 
+          SymmetricMatrixQ[
+          DiracMatrix`Private`\[Eta], Tolerance -> 10^(-12)]]] :> 
+       Module[{DiracMatrix`Private`n, DiracMatrix`Private`\[Gamma], 
+          DiracMatrix`Private`d, DiracMatrix`Private`\[CapitalGamma]}, 
+         DiracMatrix`Private`n = Length[DiracMatrix`Private`\[Eta]]; 
+         DiracMatrix`Private`\[Gamma] = 
+          DiracMatrix`GammaMatrices[DiracMatrix`Private`\[Eta]]; 
+         DiracMatrix`Private`d = Length[
+            Part[DiracMatrix`Private`\[Gamma], 1]]; 
+         DiracMatrix`Private`\[CapitalGamma] = <|{} -> 
+            IdentityMatrix[DiracMatrix`Private`d]|>; 
+         Do[DiracMatrix`Private`\[CapitalGamma][{DiracMatrix`Private`\[Mu]}] = 
+           Part[DiracMatrix`Private`\[Gamma], DiracMatrix`Private`\[Mu]], {
+           DiracMatrix`Private`\[Mu], DiracMatrix`Private`n}]; Do[
+           Do[
+            
+            With[{DiracMatrix`Private`is = DiracMatrix`Private`sub}, 
+             DiracMatrix`Private`\[CapitalGamma][DiracMatrix`Private`is] = 
+             DiracMatrix`Private`gammaAppendAntisym[
+              DiracMatrix`Private`\[Eta], DiracMatrix`Private`\[Gamma], 
+               DiracMatrix`Private`\[CapitalGamma], 
+               Most[DiracMatrix`Private`is], 
+               Last[DiracMatrix`Private`is]]], {DiracMatrix`Private`sub, 
+             Subsets[
+              Range[DiracMatrix`Private`n], {DiracMatrix`Private`k}]}], {
+           DiracMatrix`Private`k, 2, DiracMatrix`Private`n}]; Table[
+           Map[DiracMatrix`Private`\[CapitalGamma], 
+            Subsets[
+             Range[DiracMatrix`Private`n], {DiracMatrix`Private`k}]], {
+           DiracMatrix`Private`k, 0, DiracMatrix`Private`n}]]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "DiracMatrix`CliffordBasis"|>, False]]], "Output",
+ CellChangeTimes->{3.987526733721363*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"7448f7a1-0ed5-44f1-bf36-166015fd61b7"]
+}, Open  ]],
+
+Cell[BoxData["PacletInstall"], "Input",
+ CellChangeTimes->{{3.9875359867234173`*^9, 
+  3.987535997154481*^9}},ExpressionUUID->"9c7eab42-dff7-4740-859f-\
+08a2f51c4e1f"]
+},
+WindowSize->{808, 855},
+WindowMargins->{{Automatic, -1026}, {Automatic, 39}},
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (February 17, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8b0980e7-9d99-4241-9575-6a31fcd9c025"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 155, 2, 29, "Input",ExpressionUUID->"01280bb5-6a11-4f2b-aa24-15290c7cfb0f"],
+Cell[CellGroupData[{
+Cell[734, 26, 423, 7, 29, "Input",ExpressionUUID->"27e0996e-85a4-41ca-bb10-b9652691e44c"],
+Cell[1160, 35, 484, 11, 42, "Message",ExpressionUUID->"70501267-c89b-4c9e-8cbb-471c8091bf00"],
+Cell[1647, 48, 481, 11, 42, "Message",ExpressionUUID->"05d768a1-f779-4a9b-aef3-d5371aea4b6b"],
+Cell[2131, 61, 483, 11, 42, "Message",ExpressionUUID->"128b3d66-6a8c-4cc7-8fb0-4a7fcb9a0130"],
+Cell[2617, 74, 490, 11, 42, "Message",ExpressionUUID->"71b3c41d-c56c-409a-bd4c-bc1ddeb5f778"],
+Cell[3110, 87, 486, 11, 42, "Message",ExpressionUUID->"8cab8dd0-0046-4283-924b-313c006699dc"],
+Cell[3599, 100, 483, 11, 42, "Message",ExpressionUUID->"3409d2b9-d09d-425e-94eb-238be2241ff8"],
+Cell[4085, 113, 486, 11, 37, "Message",ExpressionUUID->"9b2a4ca8-0865-476f-a044-086f587fc783"],
+Cell[4574, 126, 488, 11, 37, "Message",ExpressionUUID->"35ac0577-935f-4966-859b-ed447d9fa9fa"],
+Cell[5065, 139, 476, 11, 37, "Message",ExpressionUUID->"e063a37f-d5b1-4181-975b-10f3b31aefd0"],
+Cell[5544, 152, 477, 11, 37, "Message",ExpressionUUID->"e9947db6-51ec-4310-a230-da6b2e1204a8"],
+Cell[6024, 165, 482, 11, 37, "Message",ExpressionUUID->"1ba7ff45-bce1-4268-9a52-33923073ea28"],
+Cell[6509, 178, 505, 11, 37, "Message",ExpressionUUID->"c2e0be09-7ad3-4167-b540-5468041909b1"],
+Cell[7017, 191, 483, 11, 37, "Message",ExpressionUUID->"a7db6ff3-d936-43da-a841-58351bf78828"],
+Cell[7503, 204, 484, 11, 37, "Message",ExpressionUUID->"70dfdc6f-5409-42f9-b12d-73b21a044a29"],
+Cell[7990, 217, 144865, 2675, 60, "Output",ExpressionUUID->"c3486160-0a71-4271-b29e-d354ca11b794"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[152892, 2897, 632, 10, 90, "Input",ExpressionUUID->"cb7de1d1-0a59-445b-9590-c36e2644c2c0"],
+Cell[153527, 2909, 658, 14, 59, "Message",ExpressionUUID->"ac63275b-8197-4b72-9749-34f381a5fc9e"],
+Cell[154188, 2925, 603, 13, 42, "Message",ExpressionUUID->"f844f9e5-0f7b-4e1b-b351-64a5db73f798"],
+Cell[154794, 2940, 178, 2, 33, "Output",ExpressionUUID->"04ee16e4-af3d-4dfd-8e78-95348080e902"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[155009, 2947, 224, 3, 29, "Input",ExpressionUUID->"8817e388-0187-4bda-921c-4d9bfc5d9433"],
+Cell[155236, 2952, 531, 9, 53, "Output",ExpressionUUID->"6378a9f9-6eab-4a76-9e13-1185b4872bbe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[155804, 2966, 203, 3, 29, "Input",ExpressionUUID->"739ebff7-7c97-435e-ad74-2c302d417099"],
+Cell[156010, 2971, 21438, 478, 142, "Output",ExpressionUUID->"7448f7a1-0ed5-44f1-bf36-166015fd61b7"]
+}, Open  ]],
+Cell[177463, 3452, 167, 3, 29, "Input",ExpressionUUID->"9c7eab42-dff7-4740-859f-08a2f51c4e1f"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
