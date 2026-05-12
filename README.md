@@ -43,6 +43,14 @@ PacletInstall["/path/to/DiracMatrixPackage"]
 Needs["DiracMatrix`"]
 ```
 
+or
+
+```wolfram
+PacletInstall["http://wolfr.am/DiracMatrix", 
+ ForceVersionInstall -> True]
+Needs["DiracMatrix`"]
+```
+
 or, without installing,
 
 ```wolfram
