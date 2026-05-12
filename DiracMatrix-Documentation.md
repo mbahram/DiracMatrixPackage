@@ -66,6 +66,14 @@ where η is the signature matrix and Γ^a are the flat-space gamma matrices in t
 
 ### Loading the package
 
+Install from cloud
+```wolfram
+PacletInstall["https://wolfr.am/DiracMatrix", 
+ ForceVersionInstall -> True]
+Needs["DiracMatrix`"]
+```
+
+If you have paclet file locally:
 ```wolfram
 PacletDirectoryLoad["/path-to/DiracMatrixPackage"];
 Needs["DiracMatrix`"]
