@@ -14,7 +14,7 @@
 (* :Mathematica Version: 13.0+ *)
 (* :Keywords: Dirac, gamma matrices, Clifford algebra, vielbein, spinor *)
 
-BeginPackage["DiracMatrix`"];
+BeginPackage["WolframQuantumComputation`DiracMatrix`"];
 
 (* ----- Public symbols ----- *)
 

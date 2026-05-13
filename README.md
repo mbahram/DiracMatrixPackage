@@ -46,8 +46,7 @@ Needs["DiracMatrix`"]
 or
 
 ```wolfram
-PacletInstall["http://wolfr.am/DiracMatrix", 
- ForceVersionInstall -> True]
+PacletInstall["WolframQuantumComputation/DiracMatrix",ForceVersionInstall -> True]
 Needs["DiracMatrix`"]
 ```
 

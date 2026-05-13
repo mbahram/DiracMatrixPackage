@@ -1,0 +1,1305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     49539,       1296]
+NotebookOptionsPosition[     39690,       1103]
+NotebookOutlinePosition[     42508,       1171]
+CellTagsIndexPosition[     42422,       1166]
+WindowTitle->CliffordCanonicalBasis
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "WOLFRAM QUANTUM COMPUTATION/ DIRAC MATRIX SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "b745fe84-49a8-4e11-a341-aa70c2df9225"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "4c5252ea-25e5-4958-b385-f9ff24c5e973"],
+        Background->LightDarkSwitched[
+          RGBColor[0.490196, 0.576471, 0.690196]],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "dfffbfe0-8a1e-47e1-bde2-012b89c38842"]
+         }],ExpressionUUID->"ab10a955-1523-40e8-8f76-87ae338e9256"],
+         StripOnInput->False],{
+        StyleBox[
+          "\"CliffordBasis\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/CliffordBasis"], 
+         StyleBox[
+          "\"GammaMatrices\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/GammaMatrices"], 
+         StyleBox["\"FlatMetric\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/FlatMetric"], 
+         StyleBox[
+          "\"RandomCurvedMetric\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/\
+RandomCurvedMetric"], 
+         StyleBox[
+          "\"Permutations\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/Permutations"], 
+         StyleBox["\"Signature\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/ref/Signature"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "f7091983-0e28-4d05-bbc5-7746010cdde6"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "91e1973e-2667-4653-a097-225db0da02d8"]
+         }],ExpressionUUID->"ec9020b2-63b5-49dd-934b-48a48718fa2a"],
+         StripOnInput->False],{
+        "\"DiracMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:WolframQuantumComputation/DiracMatrix/guide/DiracMatrix"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "02f311da-1ea5-4211-8cb3-8359928a35fd"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "fd368807-e814-4c78-a8a6-58bb7bc4b4e6"]
+         }],ExpressionUUID->"5bff705f-b86f-4f6a-81e8-7bb919e9deba"],
+         StripOnInput->False],{
+        "\"WolframQuantumComputation/DiracMatrix/ref/CliffordCanonicalBasis\"\
+" :> None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         CopyToClipboard[
+          "WolframQuantumComputation/DiracMatrix/ref/CliffordCanonicalBasis"],
+          Delimiter, "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/\
+WolframQuantumComputation/DiracMatrix/ref/CliffordCanonicalBasis.html"], 
+                   StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "WolframQuantumComputation/DiracMatrix/ref/\
+CliffordCanonicalBasis" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "110e988d-c75e-4633-a1ab-9d3f0cfa7cf8"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "d683b226-d055-453e-862d-73f3b057673a"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"3d2ce5e3-ebe2-4102-9093-8a7fe0f9df9a"],
+
+Cell["WolframQuantumComputation`DiracMatrix`", "ContextNameCell",ExpressionUUID->"f10d2581-ceb2-41ad-9048-b4cee81bed74"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "CliffordCanonicalBasis", "ObjectName",ExpressionUUID->
+      "61384751-629e-45d3-8369-69d266e56224"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"434feda4-8a00-45ed-b8c3-a786edbd6aba"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "223bd219-a02c-400e-b2f7-40e0a8d44152"]
+    }],ExpressionUUID->"752521a2-1c9a-4502-ba6c-944c34fde71d"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"879d3b6a-0a68-4cdc-ab38-\
+630d0844547c"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"CliffordCanonicalBasis", "[", "\[Eta]", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e3dcd1d9-f578-4b4f-9dc3-af672843f78a"],
+     "\[LineSeparator]returns the canonical graded operator basis of the \
+Clifford algebra ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{
+        StyleBox["Cl", "MR"], "(", "\[Eta]", ")"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "89007ca3-6040-4143-afcd-f5687e4c9a4a"],
+     " as a list grouped by grade ",
+     Cell[BoxData[
+      FormBox[
+       RowBox[{"{", " ", 
+        SubscriptBox["\[CapitalGamma]", 
+         RowBox[{"(", "0", ")"}]], ",", 
+        SubscriptBox["\[CapitalGamma]", 
+         RowBox[{"(", "1", ")"}]], ",", "\[Ellipsis]", ",", 
+        SubscriptBox["\[CapitalGamma]", 
+         RowBox[{"(", "n", ")"}]], " ", "}"}], TraditionalForm]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6236fa7d-3821-4591-addb-4760c9e625c9"],
+     " via explicit antisymmetrisation."
+    }],ExpressionUUID->"bf88512a-4839-4930-a0b4-a22891997554"]}
+  }]], "Usage",
+ CellID->1323187828,ExpressionUUID->"fa5e931c-4bed-4ee7-97f1-c506d191d2f9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[CurrentValue[
+         EvaluationCell[], "CellGroupOpen"] =!= Closed, 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {-0.1685058593749993, 13.768505859375}}]],
+    ExpressionUUID->"3012473a-1c6a-44eb-b20e-1f2f80f12b88"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"1e9cdc6b-9905-4df3-90df-5646cbf5e9a8"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"c5eb02c0-028d-46e0-91c6-5424867cc165"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"d1b98134-5627-4593-976e-c8b2e98cee72"]], \
+"NotesSection",
+ ShowGroupOpener->"Thumbnail",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->836369609,ExpressionUUID->"c393d811-02e1-48a5-9f9d-86ffbd8b55a0"],
+
+Cell[TextData[{
+ "Each grade-k element on indices ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["i", "1"], "<", "\[CenterEllipsis]", "<", 
+    SubscriptBox["i", "k"]}], TraditionalForm]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "f0e35ead-f5c7-4a70-88c9-818c3ced45a5"],
+ " is the antisymmetrised product ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[CapitalGamma]", 
+     RowBox[{"[", 
+      SubscriptBox["i", "1"], " ", "\[CenterEllipsis]", " ", 
+      SubscriptBox["i", "k"], "]"}]], "=", 
+    FractionBox["1", 
+     RowBox[{"k", " ", "!"}]], " ", 
+    UnderscriptBox["\[Sum]", 
+     RowBox[{"\[Sigma]", "\[Element]", 
+      SubscriptBox["S", "k"]}]], " ", 
+    StyleBox["sgn", "MR"], "(", "\[Sigma]", ")", "\[ThinSpace]", " ", 
+    SubscriptBox["\[CapitalGamma]", 
+     SubscriptBox["i", 
+      RowBox[{"\[Sigma]", "(", "1", ")"}]]], " ", "\[CenterEllipsis]", " ", 
+    SubscriptBox["\[CapitalGamma]", 
+     SubscriptBox["i", 
+      RowBox[{"\[Sigma]", "(", "k", ")"}]]]}], TraditionalForm]], 
+  "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "c3468d30-40ee-4db9-b548-75d6bcb15eac"],
+ "."
+}], "Notes",
+ CellID->662126735,ExpressionUUID->"78dffbfb-c155-407c-b185-4d8c56cbc35d"],
+
+Cell[TextData[{
+ "This is a literal transcription of the formula; it is pedagogically \
+transparent but combinatorially expensive \[LongDash] for n indices it \
+evaluates ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "!"}], TraditionalForm]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "d3306f30-3cad-4ebd-8d55-cb31ce368250"],
+ " permutations."
+}], "Notes",
+ CellID->1765949777,ExpressionUUID->"6994c64e-a533-4356-b3f3-c2263fd86938"],
+
+Cell["\<\
+For non-flat metrics with widely scaled eigenvalues, precision can degrade at \
+high grade because of cancellations. Prefer CliffordBasis for production use; \
+CliffordCanonicalBasis is best for pedagogy and as a flat-metric reference.\
+\>", "Notes",
+ CellID->1563894946,ExpressionUUID->"0a7b78d9-ad17-4811-894a-731b34689c6e"],
+
+Cell[TextData[{
+ "Number of grade-k elements is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"binom", " ", "n", " ", "k"}], TraditionalForm]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "cff8c8c4-01fe-4c2b-a652-acaad683f710"],
+ ", and the total basis size is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "n"], TraditionalForm]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "5ec37b59-3bb1-4804-a803-78f4112091e0"],
+ "."
+}], "Notes",
+ CellID->2033432512,ExpressionUUID->"2637c1b6-1753-4ff6-9f6e-7a30380719c8"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell["", "PageDelimiter",ExpressionUUID->"f5c11feb-c383-4ca7-a2c9-2590433c7776"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.251494140625001, 9.348505859375}}]],
+  ExpressionUUID->"8e2e7153-c330-46cd-8c08-e616d8b09e6a"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"d31c5830-2b4b-4954-912c-2d40ef794c3a"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(6)", "ExampleCount",ExpressionUUID->
+  "d8f3571f-8336-4dc1-bacf-fcadbcb50c68"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1583548848,ExpressionUUID->"5a1017fa-fd61-497c-a254-a41c42aeb741"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<WolframQuantumComputation`DiracMatrix`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->1094460972,ExpressionUUID->"78739f8a-a4a8-4585-b734-1c216f8401f0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.551318359375001, 9.048681640625}}]],
+  ExpressionUUID->"6b1a2404-2cbf-4a3b-a1ed-768aac438d3c"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"4080ff70-cefd-47d9-9c36-455030decc73"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "116a1a93-1f85-4509-8fa0-89c78df4c5e7"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->940651065,ExpressionUUID->"a7c1c7e0-9f99-47c6-9789-b53f77d58e31"],
+
+Cell["\<\
+On the four-dimensional Minkowski signature the basis has 1 + 4 + 6 + 4 + 1 = \
+16 elements:\
+\>", "ExampleText",
+ CellID->1698116891,ExpressionUUID->"ad988a68-5300-46ae-862c-6c9607a57c50"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", " ", "/@", " ", 
+  RowBox[{"CliffordCanonicalBasis", "[", 
+   RowBox[{"FlatMetric", "[", 
+    RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->1055816631,ExpressionUUID->"9cfd6ca0-5ed7-4cef-b79a-9f5a4ec7ea2a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "4", ",", "6", ",", "4", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->1485509758,ExpressionUUID->"68ab5a3f-7ff6-440b-acbe-92dcc991d423"]
+}, Open  ]],
+
+Cell["The grade-0 element is the identity:", "ExampleText",
+ CellID->316181059,ExpressionUUID->"4066d9f2-bd6e-4914-83bc-29fbcdf2f269"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"First", " ", "@", " ", 
+   RowBox[{"First", " ", "@", " ", 
+    RowBox[{"CliffordCanonicalBasis", "[", 
+     RowBox[{"FlatMetric", "[", 
+      RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]}], " ", "//", " ", 
+  "MatrixForm"}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[2]:=",
+ CellID->790220266,ExpressionUUID->"32befa9a-04f7-4b2a-9bb7-8e82477c2eae"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", "0"},
+     {"0", "1", "0", "0"},
+     {"0", "0", "1", "0"},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->644055068,ExpressionUUID->"ba1814f3-039d-47f5-9ec1-4ed3318da4ac"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.13131835937500114`, 13.468681640625}}]],
+  ExpressionUUID->"e78e001b-3543-4a00-a1a7-8a6d2097baac"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"de358467-85ef-4104-8fe8-4d8eed916734"],
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "efc29c09-c13e-47a9-8156-4ea69350227a"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->40662119,ExpressionUUID->"e7e8a8e5-9766-43ce-af40-bed1a0869e35"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]]]],ExpressionUUID->
+  "0cde4cc0-0595-49c2-9c78-4700dd0860cd"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"efa5ddef-5916-45f5-87b6-c74a20168124"],
+ "Two-dimensional Euclidean case",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "3a7193db-8c6d-42da-981a-874e50405e23"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->389908431,ExpressionUUID->"c68afc86-4d81-4ccf-882b-aa7466f11550"],
+
+Cell["\<\
+The canonical basis in dimension 2 has 1 + 2 + 1 = 4 elements; the grade-2 \
+element is the chirality operator up to sign:\
+\>", "ExampleText",
+ CellID->41033441,ExpressionUUID->"37251ea4-83eb-4844-bf9e-984fbd8f9e4b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", " ", "/@", " ", 
+  RowBox[{"CliffordCanonicalBasis", "[", 
+   RowBox[{"FlatMetric", "[", 
+    RowBox[{"2", ",", " ", "0"}], "]"}], "]"}]}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->34734170,ExpressionUUID->"ab931005-dc64-4c9c-bb10-58ab4c436866"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->1702850873,ExpressionUUID->"2f94a1c7-95df-427c-b59d-94f6d27f5238"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "1"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]]]],ExpressionUUID->
+  "de6ef211-9334-4ebf-b3c9-b0b7f48c00ff"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c0fe7679-b63d-4238-8326-040ac38bcbcf"],
+ "Grade-1 equals the gamma matrices",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "066fc6ec-d983-448e-b522-a1c249085685"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->870378155,ExpressionUUID->"12d66ac3-2c8f-47d3-948e-f65e0ce72451"],
+
+Cell["\<\
+The grade-1 elements are exactly the gamma matrices used in their \
+construction:\
+\>", "ExampleText",
+ CellID->344096078,ExpressionUUID->"3449d4a3-3f85-4760-9591-572268b8dd4a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CliffordCanonicalBasis", "[", 
+    RowBox[{"FlatMetric", "[", 
+     RowBox[{"1", ",", " ", "3"}], "]"}], "]"}], "[", 
+   RowBox[{"[", "2", "]"}], "]"}], " ", "===", " ", "\n", "  ", 
+  RowBox[{"GammaMatrices", "[", 
+   RowBox[{"FlatMetric", "[", 
+    RowBox[{"1", ",", " ", "3"}], "]"}], "]"}]}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->1436474764,ExpressionUUID->"90632b5f-ddeb-4500-a620-b9a2807d0888"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->859626678,ExpressionUUID->"bb27cd7c-cf98-4c4b-ae2b-032b6b87fd33"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "1"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.13131835937500114`, 13.468681640625}}]],
+  ExpressionUUID->"e69d91c9-3341-4c5b-b508-6ae91ac5c5de"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"7b0e92f5-623b-47da-b24d-05da39ccfeaf"],
+ "Applications",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "384f494d-f612-4163-abf8-8d3403537b1b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1750915628,ExpressionUUID->"585cbb33-d332-4b64-8f97-7725ea6f0446"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "2"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]]]],ExpressionUUID->
+  "6b34043d-1776-41bf-a5d0-74f966714ac9"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"075ddbbb-e133-4178-9871-fda617827182"],
+ "Agreement with CliffordBasis on flat metrics",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "3ed2d096-b2fd-4a04-95dc-7031a983ebaa"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1726976931,ExpressionUUID->"a8d2b39f-f654-42d2-89b6-3b9849aa7995"],
+
+Cell["\<\
+On any flat signature the two implementations produce the same basis at every \
+grade:\
+\>", "ExampleText",
+ CellID->322972638,ExpressionUUID->"3958133e-7bec-41b5-9e09-722cf84b78a8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Table", "[", "\n", "  ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CliffordCanonicalBasis", "[", 
+       RowBox[{"FlatMetric", "[", 
+        RowBox[{"p", ",", " ", 
+         RowBox[{"n", " ", "-", " ", "p"}]}], "]"}], "]"}], " ", "===", " ", 
+      "\n", "    ", 
+      RowBox[{"CliffordBasis", "[", 
+       RowBox[{"FlatMetric", "[", 
+        RowBox[{"p", ",", " ", 
+         RowBox[{"n", " ", "-", " ", "p"}]}], "]"}], "]"}]}], ",", "\n", "  ", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", "2", ",", " ", "5"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", " ", "0", ",", " ", "n"}], "}"}]}], "]"}], " ", "//", 
+   " ", "Flatten"}], " ", "//", " ", 
+  RowBox[{"Apply", "[", "And", "]"}]}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->1828388548,ExpressionUUID->"ef3fb1af-56fa-4266-b828-017bb8880194"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->2082447997,ExpressionUUID->"4396b81c-2e39-457f-9e10-7e9587eb91dd"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.13131835937500114`, 13.468681640625}}]],
+  ExpressionUUID->"04d64446-2e5d-4f0f-bdae-aa8b80e3553c"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"bdb8b032-46a6-4044-8cef-3e27e180bcc5"],
+ "Possible Issues",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "dd199bd6-542b-4b66-960a-f9477e6dbd4f"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1958849624,ExpressionUUID->"fbfaf2fe-1a8c-415b-9010-c9c0a94ae8e8"],
+
+Cell["\<\
+Higher grade on a random curved metric loses precision due to cancellations \
+in the explicit sum \[LongDash] prefer CliffordBasis (production-ready \
+alternative):\
+\>", "ExampleText",
+ CellID->1700122579,ExpressionUUID->"3e7507f0-3771-44a3-b779-66acb9e355ed"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "12345", "]"}], ";"}], "\n", 
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Eta]", " ", "=", " ", 
+     RowBox[{"RandomCurvedMetric", "[", 
+      RowBox[{"3", ",", " ", "3"}], "]"}]}], "}"}], ",", "\n", "  ", 
+   RowBox[{"NumericZeroQ", "[", "\n", "    ", 
+    RowBox[{
+     RowBox[{"Last", " ", "@", " ", 
+      RowBox[{"CliffordCanonicalBasis", "[", "\[Eta]", "]"}]}], " ", "-", " ",
+      "\n", "    ", 
+     RowBox[{"Last", " ", "@", " ", 
+      RowBox[{"CliffordBasis", "[", "\[Eta]", "]"}]}]}], "]"}]}], 
+  "]"}]}], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->268660303,ExpressionUUID->"33421eb2-db59-436f-b2d0-f385f90fb0ec"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->1308855079,ExpressionUUID->"a8277f05-74fa-4bb8-903b-43fd9d42a700"]
+}, Open  ]],
+
+Cell["\<\
+Non-symmetric input does not match the guard pattern; the call remains \
+unevaluated:\
+\>", "ExampleText",
+ CellID->1798491730,ExpressionUUID->"62aaec4a-3b57-41aa-b723-345d7265d4dd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CliffordCanonicalBasis", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", " ", "4"}], "}"}]}], "}"}], "]"}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[2]:=",
+ CellID->774388238,ExpressionUUID->"7ffec6d6-d064-406c-8c72-cbc869c96a03"],
+
+Cell[BoxData[
+ RowBox[{"CliffordCanonicalBasis", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "4"}], "}"}]}], "}"}], "]"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->794651532,ExpressionUUID->"63b3617c-aa46-4fa5-b2fb-5e7a5ebecf57"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "4"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.13131835937500114`, 13.468681640625}}]],
+  ExpressionUUID->"d1e9f05a-f933-4133-b03c-b8842630b410"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"3dc99a99-51ce-4786-84cc-04442c319740"],
+ "Neat Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "93959a4f-9c42-456e-84b9-3828fbf9c4ae"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1174593315,ExpressionUUID->"bbdc4e83-e090-451b-b3e5-3ae85d4eaad3"],
+
+Cell[TextData[{
+ "The total basis dimension is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "n"], TraditionalForm]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "cf2af871-f710-4038-9707-43b9d1852197"],
+ " for an n-dimensional metric:"
+}], "ExampleText",
+ CellID->358099613,ExpressionUUID->"b1219a9d-6745-42f5-a93f-bb920613ecbb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Table", "[", "\n", "  ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Total", " ", "@", " ", 
+       RowBox[{"Map", "[", 
+        RowBox[{"Length", ",", " ", 
+         RowBox[{"CliffordCanonicalBasis", "[", 
+          RowBox[{"FlatMetric", "[", 
+           RowBox[{"p", ",", " ", 
+            RowBox[{"n", " ", "-", " ", "p"}]}], "]"}], "]"}]}], "]"}]}], " ",
+       "==", " ", 
+      RowBox[{"2", "^", "n"}]}], ",", "\n", "  ", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", "2", ",", " ", "5"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", " ", "0", ",", " ", "n"}], "}"}]}], "]"}], " ", "//", 
+   " ", "Flatten"}], " ", "//", " ", 
+  RowBox[{"Apply", "[", "And", "]"}]}]], "Input",
+ CellProlog:>Needs["WolframQuantumComputation`DiracMatrix`"],
+ CellLabel->"In[1]:=",
+ CellID->2014239678,ExpressionUUID->"c597655c-7122-41e9-a72c-86ed7f929006"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->1436617641,ExpressionUUID->"16815b22-1901-4869-ab29-a5d81e1e6300"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "4"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {26.47265625, 33.52734375}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["CliffordBasis"]], 
+           "paclet:WolframQuantumComputation/DiracMatrix/ref/CliffordBasis", 
+           "WolframQuantumComputation Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "f051a108-00b4-48b6-a690-df242a7e6f13"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["GammaMatrices"]], 
+           "paclet:WolframQuantumComputation/DiracMatrix/ref/GammaMatrices", 
+           "WolframQuantumComputation Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "7bcf6950-dff6-4c39-8e6c-ea8e1e5f2fc0"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FlatMetric"]], 
+           "paclet:WolframQuantumComputation/DiracMatrix/ref/FlatMetric", 
+           "WolframQuantumComputation Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "a4058bd3-cdbf-4beb-b04a-1f20c7b88946"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["RandomCurvedMetric"]], 
+           "paclet:WolframQuantumComputation/DiracMatrix/ref/\
+RandomCurvedMetric", "WolframQuantumComputation Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "5bff846e-f835-4184-bd15-9f37e4825218"]
+       }], "SeeAlso",ExpressionUUID->"73976b66-bae2-4524-ab56-19b67bc958e2"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"e52ce5d2-65ee-40d5-a1bf-\
+82cd284bc894"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {26.47265625, 33.52734375}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["DiracMatrix"]], 
+           "paclet:WolframQuantumComputation/DiracMatrix/guide/DiracMatrix"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "f1f12991-130c-41ee-806d-3f2865e067aa"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"dc45dc8a-8e55-4018-b170-\
+b650dd9bc299"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"c87edc18-2e32-4203-854f-fea348d2729c"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"CliffordCanonicalBasis",
+Visible->True,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {
+     "0" -> Open, "1" -> Closed, "2" -> Closed, "3" -> Closed, "4" -> Closed},
+     "AllOptsTable" -> Closed, "NotesSection" -> Closed, 
+    "ExampleSubsection" -> {"0" -> Closed, "1" -> Closed, "2" -> Closed}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "HasOptions" -> True, "RootCaptions" -> "", 
+  "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2026, 5, 13, 16, 27, 8.613645}", 
+    "history" -> {"1.0.0", "", "", ""}, "context" -> 
+    "WolframQuantumComputation`DiracMatrix`", 
+    "keywords" -> {
+     "Clifford algebra", "graded basis", "antisymmetrisation", 
+      "exterior algebra", "spinor"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Quantum Computation/ Dirac Matrix Symbol", "language" -> "en", 
+    "paclet" -> "WolframQuantumComputation/DiracMatrix", "status" -> "None", 
+    "summary" -> 
+    "CliffordCanonicalBasis[\\[Eta]] returns the canonical graded operator \
+basis of the Clifford algebra Cl(\\[Eta]) as a list grouped by grade { \
+\\[CapitalGamma] (0), \\[CapitalGamma] (1), ..., \\ \\[CapitalGamma] (n) } \
+via explicit antisymmetrisation.", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "CliffordCanonicalBasis", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> "CliffordCanonicalBasis", 
+    "type" -> "Symbol", "uri" -> 
+    "WolframQuantumComputation/DiracMatrix/ref/CliffordCanonicalBasis"}},
+CellContext->"Global`",
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (February 17, 2026)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "15.0 for Mac OS X ARM (64-bit) (February 17, 2026)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"4ec8d7e8-300e-458b-a8cc-6a66cff4f1cf"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[13500, 353, 1438, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"5a1017fa-fd61-497c-a254-a41c42aeb741",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1583548848]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 42221, 1159}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[590, 21, 6181, 148, 70, "AnchorBarGrid",ExpressionUUID->"3d2ce5e3-ebe2-4102-9093-8a7fe0f9df9a",
+ CellID->1],
+Cell[6774, 171, 120, 0, 70, "ContextNameCell",ExpressionUUID->"f10d2581-ceb2-41ad-9048-b4cee81bed74"],
+Cell[CellGroupData[{
+Cell[6919, 175, 565, 14, 70, "ObjectNameGrid",ExpressionUUID->"879d3b6a-0a68-4cdc-ab38-630d0844547c"],
+Cell[7487, 191, 1294, 31, 70, "Usage",ExpressionUUID->"fa5e931c-4bed-4ee7-97f1-c506d191d2f9",
+ CellID->1323187828]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8818, 227, 1850, 45, 70, "NotesSection",ExpressionUUID->"c393d811-02e1-48a5-9f9d-86ffbd8b55a0",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->836369609],
+Cell[10671, 274, 1254, 34, 70, "Notes",ExpressionUUID->"78dffbfb-c155-407c-b185-4d8c56cbc35d",
+ CellID->662126735],
+Cell[11928, 310, 462, 11, 70, "Notes",ExpressionUUID->"6994c64e-a533-4356-b3f3-c2263fd86938",
+ CellID->1765949777],
+Cell[12393, 323, 336, 5, 70, "Notes",ExpressionUUID->"0a7b78d9-ad17-4811-894a-731b34689c6e",
+ CellID->1563894946],
+Cell[12732, 330, 558, 15, 70, "Notes",ExpressionUUID->"2637c1b6-1753-4ff6-9f6e-7a30380719c8",
+ CellID->2033432512]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[13395, 349, 80, 0, 70, "PageDelimiter",ExpressionUUID->"f5c11feb-c383-4ca7-a2c9-2590433c7776"],
+Cell[CellGroupData[{
+Cell[13500, 353, 1438, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"5a1017fa-fd61-497c-a254-a41c42aeb741",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1583548848],
+Cell[14941, 393, 230, 4, 70, "Input",ExpressionUUID->"78739f8a-a4a8-4585-b734-1c216f8401f0",
+ CellID->1094460972],
+Cell[CellGroupData[{
+Cell[15196, 401, 1415, 37, 70, "ExampleSection",ExpressionUUID->"a7c1c7e0-9f99-47c6-9789-b53f77d58e31",
+ CellID->940651065],
+Cell[16614, 440, 199, 4, 70, "ExampleText",ExpressionUUID->"ad988a68-5300-46ae-862c-6c9607a57c50",
+ CellID->1698116891],
+Cell[CellGroupData[{
+Cell[16838, 448, 343, 7, 70, "Input",ExpressionUUID->"9cfd6ca0-5ed7-4cef-b79a-9f5a4ec7ea2a",
+ CellID->1055816631],
+Cell[17184, 457, 202, 4, 70, "Output",ExpressionUUID->"68ab5a3f-7ff6-440b-acbe-92dcc991d423",
+ CellID->1485509758]
+}, Open  ]],
+Cell[17401, 464, 134, 1, 70, "ExampleText",ExpressionUUID->"4066d9f2-bd6e-4914-83bc-29fbcdf2f269",
+ CellID->316181059],
+Cell[CellGroupData[{
+Cell[17560, 469, 430, 10, 70, "Input",ExpressionUUID->"32befa9a-04f7-4b2a-9bb7-8e82477c2eae",
+ CellID->790220266],
+Cell[17993, 481, 654, 19, 70, "Output",ExpressionUUID->"ba1814f3-039d-47f5-9ec1-4ed3318da4ac",
+ CellID->644055068]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[18796, 508, 1409, 37, 70, "ExampleSection",ExpressionUUID->"e7e8a8e5-9766-43ce-af40-bed1a0869e35",
+ CellID->40662119],
+Cell[CellGroupData[{
+Cell[20230, 549, 1356, 35, 70, "ExampleSubsection",ExpressionUUID->"c68afc86-4d81-4ccf-882b-aa7466f11550",
+ CellID->389908431],
+Cell[21589, 586, 227, 4, 70, "ExampleText",ExpressionUUID->"37251ea4-83eb-4844-bf9e-984fbd8f9e4b",
+ CellID->41033441],
+Cell[CellGroupData[{
+Cell[21841, 594, 341, 7, 70, "Input",ExpressionUUID->"ab931005-dc64-4c9c-bb10-58ab4c436866",
+ CellID->34734170],
+Cell[22185, 603, 182, 4, 70, "Output",ExpressionUUID->"2f94a1c7-95df-427c-b59d-94f6d27f5238",
+ CellID->1702850873]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[22519, 615, 1359, 35, 70, "ExampleSubsection",ExpressionUUID->"12d66ac3-2c8f-47d3-948e-f65e0ce72451",
+ CellID->870378155],
+Cell[23881, 652, 187, 4, 70, "ExampleText",ExpressionUUID->"3449d4a3-3f85-4760-9591-572268b8dd4a",
+ CellID->344096078],
+Cell[CellGroupData[{
+Cell[24093, 660, 514, 12, 70, "Input",ExpressionUUID->"90632b5f-ddeb-4500-a620-b9a2807d0888",
+ CellID->1436474764],
+Cell[24610, 674, 129, 2, 70, "Output",ExpressionUUID->"bb27cd7c-cf98-4c4b-ae2b-032b6b87fd33",
+ CellID->859626678]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "1"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[25003, 687, 1418, 37, 70, "ExampleSection",ExpressionUUID->"585cbb33-d332-4b64-8f97-7725ea6f0446",
+ CellID->1750915628],
+Cell[CellGroupData[{
+Cell[26446, 728, 1371, 35, 70, "ExampleSubsection",ExpressionUUID->"a8d2b39f-f654-42d2-89b6-3b9849aa7995",
+ CellID->1726976931],
+Cell[27820, 765, 192, 4, 70, "ExampleText",ExpressionUUID->"3958133e-7bec-41b5-9e09-722cf84b78a8",
+ CellID->322972638],
+Cell[CellGroupData[{
+Cell[28037, 773, 930, 23, 70, "Input",ExpressionUUID->"ef3fb1af-56fa-4266-b828-017bb8880194",
+ CellID->1828388548],
+Cell[28970, 798, 130, 2, 70, "Output",ExpressionUUID->"4396b81c-2e39-457f-9e10-7e9587eb91dd",
+ CellID->2082447997]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[29364, 811, 1421, 37, 70, "ExampleSection",ExpressionUUID->"fbfaf2fe-1a8c-415b-9010-c9c0a94ae8e8",
+ CellID->1958849624],
+Cell[30788, 850, 271, 5, 70, "ExampleText",ExpressionUUID->"3e7507f0-3771-44a3-b779-66acb9e355ed",
+ CellID->1700122579],
+Cell[CellGroupData[{
+Cell[31084, 859, 766, 19, 70, "Input",ExpressionUUID->"33421eb2-db59-436f-b2d0-f385f90fb0ec",
+ CellID->268660303],
+Cell[31853, 880, 131, 2, 70, "Output",ExpressionUUID->"a8277f05-74fa-4bb8-903b-43fd9d42a700",
+ CellID->1308855079]
+}, Open  ]],
+Cell[31999, 885, 192, 4, 70, "ExampleText",ExpressionUUID->"62aaec4a-3b57-41aa-b723-345d7265d4dd",
+ CellID->1798491730],
+Cell[CellGroupData[{
+Cell[32216, 893, 399, 10, 70, "Input",ExpressionUUID->"7ffec6d6-d064-406c-8c72-cbc869c96a03",
+ CellID->774388238],
+Cell[32618, 905, 323, 9, 70, "Output",ExpressionUUID->"63b3617c-aa46-4fa5-b2fb-5e7a5ebecf57",
+ CellID->794651532]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[33090, 922, 1419, 37, 70, "ExampleSection",ExpressionUUID->"bbdc4e83-e090-451b-b3e5-3ae85d4eaad3",
+ CellID->1174593315],
+Cell[34512, 961, 359, 9, 70, "ExampleText",ExpressionUUID->"b1219a9d-6745-42f5-a93f-bb920613ecbb",
+ CellID->358099613],
+Cell[CellGroupData[{
+Cell[34896, 974, 909, 23, 70, "Input",ExpressionUUID->"c597655c-7122-41e9-a72c-86ed7f929006",
+ CellID->2014239678],
+Cell[35808, 999, 130, 2, 70, "Output",ExpressionUUID->"16815b22-1901-4869-ab29-a5d81e1e6300",
+ CellID->1436617641]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "4"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[36180, 1010, 2659, 68, 70, "SeeAlsoSection",ExpressionUUID->"e52ce5d2-65ee-40d5-a1bf-82cd284bc894"],
+Cell[38842, 1080, 763, 19, 70, "MoreAboutSection",ExpressionUUID->"dc45dc8a-8e55-4018-b170-b650dd9bc299"],
+Cell[39608, 1101, 78, 0, 70, "FooterCell",ExpressionUUID->"c87edc18-2e32-4203-854f-fea348d2729c"]
+}
+]
+*)
+
+(* End of internal cache information *)
